@@ -1,0 +1,24 @@
+{
+  "case": {
+    "alpha": 0.5,
+    "case_id": "regression_raw_v3_esol_a0p5_seed0_oursvatFLITPLUS",
+    "case_index": 7,
+    "dataset": "esol",
+    "descriptor": "",
+    "encoder": "mpnn",
+    "k": 0,
+    "lambda_proto": 0.1,
+    "local_steps": 200,
+    "method": "oursvatFLITPLUS",
+    "partition": "hetero",
+    "rounds": 50,
+    "seed": 0,
+    "suite": "regression_raw_v3_baselines"
+  },
+  "curve_sha256": "c96cfc6ca064e273233eda5f4d4ff8a9cc750b032f5810472ebddc06ef8f34ee",
+  "exit_code": 0,
+  "formal": true,
+  "lock_sha256": "f0e8062da041ff95c5aaf199b357b5255502c1414f5e0d720eb436a96fa1d7e9",
+  "log_sha256": "236665e9471cfa1229c3c06071cf979660a2954475a144f198d0715334f231bf",
+  "shared_authorization_sha256": "565dddb289f6ea5eee1a3c8f105be5bfdfd4e49117f7d04ff6da63f3aeb8472d"
+}

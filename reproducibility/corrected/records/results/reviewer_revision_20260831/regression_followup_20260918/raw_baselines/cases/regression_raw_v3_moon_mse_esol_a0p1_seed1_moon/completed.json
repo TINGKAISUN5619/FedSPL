@@ -1,0 +1,24 @@
+{
+  "case": {
+    "alpha": 0.1,
+    "case_id": "regression_raw_v3_moon_mse_esol_a0p1_seed1_moon",
+    "case_index": 1,
+    "dataset": "esol",
+    "descriptor": "",
+    "encoder": "mpnn",
+    "k": 0,
+    "lambda_proto": 0.1,
+    "local_steps": 200,
+    "method": "moon",
+    "partition": "hetero",
+    "rounds": 50,
+    "seed": 1,
+    "suite": "regression_raw_v3_moon_mse"
+  },
+  "curve_sha256": "df1a032adc8c8dd4749b3c4cff70b24e141264f7c2705e54e39312ac9c1242a5",
+  "exit_code": 0,
+  "formal": true,
+  "lock_sha256": "f0e8062da041ff95c5aaf199b357b5255502c1414f5e0d720eb436a96fa1d7e9",
+  "log_sha256": "861091ff59039255cf1a8e75bd8f63efe8925a1b431358f2ed4e091fb362dec5",
+  "shared_authorization_sha256": "565dddb289f6ea5eee1a3c8f105be5bfdfd4e49117f7d04ff6da63f3aeb8472d"
+}

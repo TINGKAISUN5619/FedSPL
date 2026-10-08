@@ -1,0 +1,16 @@
+dataset,seed,n,parse_failures,duplicate_groups,duplicate_rows,redundant_rows,observed_label_conflict_groups,train_val_identities,train_val_val_rows,train_test_identities,train_test_test_rows,val_test_identities,val_test_test_rows,train_within_redundant_rows,val_within_redundant_rows,test_within_redundant_rows
+BBBP,0,2039,0,60,124,64,10,12,12,11,12,0,0,39,1,1
+BBBP,1,2039,0,60,124,64,10,8,8,12,12,2,2,43,0,0
+BBBP,2,2039,0,60,124,64,10,10,10,8,8,1,1,44,1,0
+SIDER,0,1427,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SIDER,1,1427,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SIDER,2,1427,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tox21,0,7831,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tox21,1,7831,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tox21,2,7831,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+HIV,0,41127,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+HIV,1,41127,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+HIV,2,41127,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ToxCast,0,8577,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ToxCast,1,8577,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ToxCast,2,8577,0,0,0,0,0,0,0,0,0,0,0,0,0,0

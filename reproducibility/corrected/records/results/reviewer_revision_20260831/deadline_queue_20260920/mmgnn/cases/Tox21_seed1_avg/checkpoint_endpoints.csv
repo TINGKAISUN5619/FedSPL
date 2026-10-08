@@ -1,0 +1,9 @@
+protocol,round,method,model_scope,split,score_kind,auc,primary,valid_tasks,molecules,device,torch,stage,test_selection,python,dgl,rdkit,cuda_runtime,device_name,checkpoint,selected_round,primary_endpoint
+mmgnn-raw-logit-v2-20260918,49,avg,server,val,logits,0.77994458284582,True,12,783,cuda:0,1.8.1,confirmation,False,3.8.20,0.6.1,2022.09.5,11.1,NVIDIA A100-PCIE-40GB,final,49,True
+mmgnn-raw-logit-v2-20260918,49,avg,server,val,probabilities,0.77994458284582,False,12,783,cuda:0,1.8.1,confirmation,False,3.8.20,0.6.1,2022.09.5,11.1,NVIDIA A100-PCIE-40GB,final,49,True
+mmgnn-raw-logit-v2-20260918,49,avg,server,test,logits,0.7882140592572023,True,12,784,cuda:0,1.8.1,confirmation,False,3.8.20,0.6.1,2022.09.5,11.1,NVIDIA A100-PCIE-40GB,final,49,True
+mmgnn-raw-logit-v2-20260918,49,avg,server,test,probabilities,0.7882060075901102,False,12,784,cuda:0,1.8.1,confirmation,False,3.8.20,0.6.1,2022.09.5,11.1,NVIDIA A100-PCIE-40GB,final,49,True
+mmgnn-raw-logit-v2-20260918,10,avg,server,val,logits,0.8280966928593338,True,12,783,cuda:0,1.8.1,confirmation,False,3.8.20,0.6.1,2022.09.5,11.1,NVIDIA A100-PCIE-40GB,validation_selected,10,False
+mmgnn-raw-logit-v2-20260918,10,avg,server,val,probabilities,0.8280966928593338,False,12,783,cuda:0,1.8.1,confirmation,False,3.8.20,0.6.1,2022.09.5,11.1,NVIDIA A100-PCIE-40GB,validation_selected,10,False
+mmgnn-raw-logit-v2-20260918,10,avg,server,test,logits,0.8209016355383185,True,12,784,cuda:0,1.8.1,confirmation,False,3.8.20,0.6.1,2022.09.5,11.1,NVIDIA A100-PCIE-40GB,validation_selected,10,False
+mmgnn-raw-logit-v2-20260918,10,avg,server,test,probabilities,0.8209016355383185,False,12,784,cuda:0,1.8.1,confirmation,False,3.8.20,0.6.1,2022.09.5,11.1,NVIDIA A100-PCIE-40GB,validation_selected,10,False

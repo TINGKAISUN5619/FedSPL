@@ -1,0 +1,24 @@
+{
+  "case": {
+    "alpha": 0.5,
+    "case_id": "regression_raw_v3_freesolv_a0p5_seed1_fedprox",
+    "case_index": 44,
+    "dataset": "freesolv",
+    "descriptor": "",
+    "encoder": "mpnn",
+    "k": 0,
+    "lambda_proto": 0.1,
+    "local_steps": 200,
+    "method": "fedprox",
+    "partition": "hetero",
+    "rounds": 50,
+    "seed": 1,
+    "suite": "regression_raw_v3_baselines"
+  },
+  "curve_sha256": "15e8f02c5eae6b85c6cba398a271ac412976e3e49c4ceec359b3ff3b0a58fe18",
+  "exit_code": 0,
+  "formal": true,
+  "lock_sha256": "f0e8062da041ff95c5aaf199b357b5255502c1414f5e0d720eb436a96fa1d7e9",
+  "log_sha256": "76ce2fa2d9e810c1bfa38993941dd6471e8afdce721718e5ad56a8439c7f9527",
+  "shared_authorization_sha256": "565dddb289f6ea5eee1a3c8f105be5bfdfd4e49117f7d04ff6da63f3aeb8472d"
+}

@@ -1,0 +1,6 @@
+{
+  "aggregation": false,
+  "pretrained": false,
+  "sha256": "80c4ed251d34cc715b172167604abdb8fef7bb399eace3deabe3dfaa6dfa794c",
+  "shared_random_initialization": true
+}

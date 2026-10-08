@@ -1,0 +1,24 @@
+{
+  "case": {
+    "alpha": 0.1,
+    "case_id": "regression_raw_v3_esol_a0p1_seed2_fedprox",
+    "case_index": 4,
+    "dataset": "esol",
+    "descriptor": "",
+    "encoder": "mpnn",
+    "k": 0,
+    "lambda_proto": 0.1,
+    "local_steps": 200,
+    "method": "fedprox",
+    "partition": "hetero",
+    "rounds": 50,
+    "seed": 2,
+    "suite": "regression_raw_v3_baselines"
+  },
+  "curve_sha256": "729b86773243ea284190792900daeebd9e2b452bbb47a5d890757d1ec32668d5",
+  "exit_code": 0,
+  "formal": true,
+  "lock_sha256": "f0e8062da041ff95c5aaf199b357b5255502c1414f5e0d720eb436a96fa1d7e9",
+  "log_sha256": "495bd564c3ae5b015e3a38b7e54fcf8752daefdaf5bdb4eca25b18d01fb8768f",
+  "shared_authorization_sha256": "565dddb289f6ea5eee1a3c8f105be5bfdfd4e49117f7d04ff6da63f3aeb8472d"
+}

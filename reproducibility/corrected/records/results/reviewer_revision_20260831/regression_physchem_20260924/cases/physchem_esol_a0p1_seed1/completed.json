@@ -1,0 +1,20 @@
+{
+  "case": {
+    "alpha": 0.1,
+    "case_id": "physchem_esol_a0p1_seed1",
+    "dataset": "esol",
+    "descriptor": "physchem",
+    "encoder": "mpnn",
+    "k": 16,
+    "lambda_proto": 0.1,
+    "local_steps": 200,
+    "method": "fedavg_proto",
+    "rounds": 50,
+    "seed": 1
+  },
+  "curve_sha256": "71449a4079823570e6fad4728ecb3966c234243add9bb357fc50f00a63501ef4",
+  "elapsed_seconds": 1002.2204119600356,
+  "exit_code": 0,
+  "formal": true,
+  "log_sha256": "42cc1ce067cea87b104b68f14ea18f079a8895554030acc931f373d7811edddd"
+}

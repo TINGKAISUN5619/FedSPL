@@ -1,0 +1,23 @@
+{
+  "blocks": 50,
+  "case_id": "central_SIDER_seed2",
+  "files": {
+    "block_curve.csv": "a491321759008be74dc09ab3a258040e7c25c7ad9c02c92135091a762ec30a28",
+    "endpoints.json": "8f801ec7f49704559b3a0e9df468146556027516ee36b52b5d98f41aab788cde",
+    "events.json": "a62368d97978d734f84b4b1bc06756ec93c1ffca9b49390ea5bc08aa5bb8738d",
+    "final.pt": "290cba16caf58bd9223453a68891fe32afbf7d365247e4703a4f3193e5818993",
+    "final_test_predictions.npz": "6dbdcc79cde654148ef3c95239001894f1803afca79ef0a3620e45ea90c92f54",
+    "final_val_predictions.npz": "6ec9bf68809ca4d66fa09d9c6e665f3487ce478bc85d94aaa8fe71af41ec9476",
+    "selection.json": "f42203efd8332006bb35c5871233c43984c0d6a4bf386c536ff0f18df8494094",
+    "spec.json": "d3b378d46dbb3475612ef4a034da0a9af3da46d710c0bd54518e5a5a66c616e2",
+    "split_ids.json": "b6feff24415bff581ed5c185205d351a2937d88345fab9fb9c73cabd6ddb0003",
+    "val_selected.pt": "4cc6b38565bbfe1253a5027ddeb4ce7b6c3729bdd6e8f2b900577a8736a528d5",
+    "val_selected_test_predictions.npz": "d8d9f22f3745d28fef32b2dd8de2e3e134c5834305342d51068593f95880ef80",
+    "val_selected_val_predictions.npz": "2feee2b06952d053eb8c47df6edcfc33a6d11cdbb2f266b07c08dad7fdd074f2"
+  },
+  "formal": true,
+  "manifest_sha256": "0fd8d723a9490d2654ac5bd8cb14b058002b850df51d22a6a6a79eda0096c0e5",
+  "protocol": "central_mpnn_reviewer_v3_50x800_v1",
+  "status": "complete",
+  "successful_updates": 40000
+}

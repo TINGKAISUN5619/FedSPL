@@ -1,0 +1,11 @@
+{
+  "best_block": 49,
+  "best_val_auc": 0.6891949851732703,
+  "checkpoint_sha256": {
+    "final": "0fa81fb790a5b58dca285fb68b396b17171a43a85323590b0fd4a3e4eb2b8f5f",
+    "val_selected": "ea49ab8c7193f1b5e441c14fc1acfecb133ad280ac5292750dad84847565d132"
+  },
+  "final_block": 49,
+  "rule": "maximum validation AUC; earliest exact tie",
+  "test_access_count_before_selection": 0
+}

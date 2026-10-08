@@ -1,0 +1,24 @@
+{
+  "case": {
+    "alpha": 0.1,
+    "case_id": "regression_raw_v3_lipo_a0p1_seed1_oursvatFLITPLUS",
+    "case_index": 21,
+    "dataset": "lipo",
+    "descriptor": "",
+    "encoder": "mpnn",
+    "k": 0,
+    "lambda_proto": 0.1,
+    "local_steps": 200,
+    "method": "oursvatFLITPLUS",
+    "partition": "hetero",
+    "rounds": 50,
+    "seed": 1,
+    "suite": "regression_raw_v3_baselines"
+  },
+  "curve_sha256": "ceb5924d24d413d9673cad220dbbca71e021303d329226572cc0e21366d243d0",
+  "exit_code": 0,
+  "formal": true,
+  "lock_sha256": "f0e8062da041ff95c5aaf199b357b5255502c1414f5e0d720eb436a96fa1d7e9",
+  "log_sha256": "e66dea34da7651705836632f8e14d5a22edfd3f128dc9f3df1649cda18fb256e",
+  "shared_authorization_sha256": "565dddb289f6ea5eee1a3c8f105be5bfdfd4e49117f7d04ff6da63f3aeb8472d"
+}

@@ -1,0 +1,38 @@
+{
+  "allocator_cap_enabled": false,
+  "approval_sha256": "779cf19b429e46408b51f2bb697ca56cca7761b0174a090643e7b6e58e075aff",
+  "argv": [
+    "-dataset",
+    "Tox21",
+    "-fedmid",
+    "avg",
+    "-part_alpha",
+    "0.1",
+    "-seed",
+    "2",
+    "-comm_round",
+    "50",
+    "-numClient",
+    "4"
+  ],
+  "audit_only": true,
+  "case": {
+    "alpha": 0.1,
+    "case_id": "Tox21_a0p1_seed2_official_avg",
+    "clients": 4,
+    "dataset": "Tox21",
+    "rounds": 50,
+    "seed": 2,
+    "steps": 200
+  },
+  "clients_per_round": 4,
+  "cuda": "11.1",
+  "formal": true,
+  "global_epoch_preserved": true,
+  "global_loader_workers": 4,
+  "rounds": 50,
+  "source_commit": "55762d0c50c073e2367a6b5b90bca6967b21f612",
+  "source_files_unchanged": true,
+  "steps": 200,
+  "torch": "1.8.1"
+}

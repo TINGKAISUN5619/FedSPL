@@ -1,0 +1,10 @@
+{
+  "protocol": "mechanism-closure-v1",
+  "control": "descriptor_correspondence",
+  "status": "exploratory_mechanism_diagnostic_not_numerical_equivalence_confirmation",
+  "prior_sider_zero_weight_noise_gate": "failed; retained; this experiment does not overturn that finding",
+  "new_source_sha256": {
+    "run_mechanism_case.py": "46d4d9e0e9ef09fbcb58fe729dc8bf6bbc4840eee6dd4d7ae91e6006563c145c",
+    "mechanism_controls.py": "3430fb5dca29a41dc47f45708a40f63ef5775d2706d201e67e99dacdcfa462e9"
+  }
+}

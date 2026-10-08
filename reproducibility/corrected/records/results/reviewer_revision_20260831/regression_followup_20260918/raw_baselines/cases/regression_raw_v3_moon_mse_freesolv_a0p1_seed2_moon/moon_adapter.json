@@ -1,0 +1,11 @@
+{
+  "adapter": "reviewer-v3-moon-raw-mse-only-v1",
+  "adapter_sha256": "db9303e5e8b9a28ecf362fd54726845f26f20245e3f1d49f1cc709a81eb75f0b",
+  "change": "F.binary_cross_entropy_with_logits -> F.mse_loss; reduction=none",
+  "changed_calls": 1,
+  "client_sha256": "9f716b14f4eb5af01697f0fb6f22c159168c85dfc28ccb2e5588442916383e4e",
+  "label_standardization": false,
+  "original_method_sha256": "9d575bfd1a74652e006293d341dee854720b8cde050042989c13f932b9cac004",
+  "source_on_disk_modified": false,
+  "unchanged": "mask, current/global/previous models, contrastive CE, mu/tau, Adam, clip, steps"
+}

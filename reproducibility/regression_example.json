@@ -1,0 +1,1 @@
+{"dataset": "esol", "method": "fedavg_proto", "alpha": 0.5, "seed": 0, "num_workers": 0}

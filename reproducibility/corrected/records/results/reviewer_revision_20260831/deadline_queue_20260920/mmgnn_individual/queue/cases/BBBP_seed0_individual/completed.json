@@ -1,0 +1,28 @@
+{
+  "artifact_sha256": {
+    "checkpoint_endpoints.csv": "6d3ac0eb1a08cdafbbc7a3fbcc67bb4f3d3cd662859ff4eb15356bd3d8c71b50",
+    "individual_models.pt": "06203cec8b74b97eb6828c4c8e668a248790670bb9163a56a82c432fd3a46258",
+    "initialization.json": "b90251e8fdd5ce817967550696a0cce8afcc26e3c8cb6d0c1a0158fd72e05823",
+    "no_exchange_audit.json": "1fffcce9b4d06ae61ec841e8b21278590226f2f685d6d42f2ec7482666cef20c",
+    "paired_batch_trace.csv": "4b90656c8926af01ea663064a50e6b7fe9226ad15578f3ed5a41b8a0524acdbe",
+    "partition_audit.json": "8755ee210f6d93dc8cf5f08ac3185f031c604536ede92bee2a6e6a909d1ad516",
+    "raw_metric_curves.csv": "5c0b32d9e973a6c2e3a5389058f6a9a4fdd881a541a290d1c3cbfe96becab3b1",
+    "round_state_hashes.csv": "0a4dca9e281622e9b6a8c1203716d4454203123bfe49011458545b5d77cec8d7",
+    "spec.json": "22fba3ac7736257d37e474454d679efa187bd8b417e77801bda1271a19203f64"
+  },
+  "case": {
+    "alpha": 0.5,
+    "case_id": "BBBP_seed0_individual",
+    "dataset": "BBBP",
+    "global_k": 16,
+    "lambda_proto": 0.0,
+    "local_k": 16,
+    "method": "individual",
+    "peak_lr": 0.0003,
+    "rounds": 50,
+    "seed": 0,
+    "steps": 200
+  },
+  "completed": true,
+  "protocol": "mmgnn-individual-paired-v1-20260921"
+}

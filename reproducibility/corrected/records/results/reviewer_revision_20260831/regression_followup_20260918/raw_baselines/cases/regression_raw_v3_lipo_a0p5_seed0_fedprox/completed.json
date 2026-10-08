@@ -1,0 +1,24 @@
+{
+  "case": {
+    "alpha": 0.5,
+    "case_id": "regression_raw_v3_lipo_a0p5_seed0_fedprox",
+    "case_index": 24,
+    "dataset": "lipo",
+    "descriptor": "",
+    "encoder": "mpnn",
+    "k": 0,
+    "lambda_proto": 0.1,
+    "local_steps": 200,
+    "method": "fedprox",
+    "partition": "hetero",
+    "rounds": 50,
+    "seed": 0,
+    "suite": "regression_raw_v3_baselines"
+  },
+  "curve_sha256": "4b4a0a57e130da842a9e6b82e784ebc7b35b5e3519d48c741bd81439a8e666f1",
+  "exit_code": 0,
+  "formal": true,
+  "lock_sha256": "f0e8062da041ff95c5aaf199b357b5255502c1414f5e0d720eb436a96fa1d7e9",
+  "log_sha256": "8ceb2f35a0a0b63fa932d0f6b3563f7d849bfafea2729191a4e040092cf02f31",
+  "shared_authorization_sha256": "565dddb289f6ea5eee1a3c8f105be5bfdfd4e49117f7d04ff6da63f3aeb8472d"
+}

@@ -1,0 +1,23 @@
+{
+  "blocks": 50,
+  "case_id": "central_HIV_seed2",
+  "files": {
+    "block_curve.csv": "b4a7535f5912dc6e06cfaeb45ad120ce917838fb523e4f9e182bae7dbae70634",
+    "endpoints.json": "2e6b1922600bc838911a652db905ad7998b3636c92543f36bdcbb699a2172385",
+    "events.json": "d770cbd703ce49802de248e4793a6c115de5d3ae1d7801a7ecc2d594f593bc99",
+    "final.pt": "776af673d05f1b4f70e770cca065921e33b46045b5ec7eac6a1929a75a8f8d34",
+    "final_test_predictions.npz": "4912935ace8865fa109417fb64518c1b90e1492c53d1570e521464bf44f6ed11",
+    "final_val_predictions.npz": "c87fe67edbdf0238f899967f38c097cc96c5519861d04909955be2e37ed7b5c9",
+    "selection.json": "657ec23bb0e2a52f2ca43af7df5088fd731ab4023b60a20f9d62a89de1d7c8c5",
+    "spec.json": "c91ed24e703d8ec7f8752a0684e394840bf520da16d3772887bba99b89ade9a8",
+    "split_ids.json": "e467fdf12c76debbb5502fa21572009df9e82b11137d7885f804edb7f6557f6d",
+    "val_selected.pt": "275c8b998e8cd1804ff2714f3edaa207bb7c2508d14ff85891638bd4e16affca",
+    "val_selected_test_predictions.npz": "4912935ace8865fa109417fb64518c1b90e1492c53d1570e521464bf44f6ed11",
+    "val_selected_val_predictions.npz": "c87fe67edbdf0238f899967f38c097cc96c5519861d04909955be2e37ed7b5c9"
+  },
+  "formal": true,
+  "manifest_sha256": "0fd8d723a9490d2654ac5bd8cb14b058002b850df51d22a6a6a79eda0096c0e5",
+  "protocol": "central_mpnn_reviewer_v3_50x800_v1",
+  "status": "complete",
+  "successful_updates": 40000
+}

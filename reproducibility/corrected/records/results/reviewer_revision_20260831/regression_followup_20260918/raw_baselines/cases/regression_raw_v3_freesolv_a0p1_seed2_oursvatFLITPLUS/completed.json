@@ -1,0 +1,24 @@
+{
+  "case": {
+    "alpha": 0.1,
+    "case_id": "regression_raw_v3_freesolv_a0p1_seed2_oursvatFLITPLUS",
+    "case_index": 41,
+    "dataset": "freesolv",
+    "descriptor": "",
+    "encoder": "mpnn",
+    "k": 0,
+    "lambda_proto": 0.1,
+    "local_steps": 200,
+    "method": "oursvatFLITPLUS",
+    "partition": "hetero",
+    "rounds": 50,
+    "seed": 2,
+    "suite": "regression_raw_v3_baselines"
+  },
+  "curve_sha256": "b5977bf580247bcb05407bc4f4d11237dddb3e10eb6ed12f862b3e0c817b4d3e",
+  "exit_code": 0,
+  "formal": true,
+  "lock_sha256": "f0e8062da041ff95c5aaf199b357b5255502c1414f5e0d720eb436a96fa1d7e9",
+  "log_sha256": "5ceb5a140d10bf2bec93eb4dcd768c7caf5e43cd4b9564972fceae7dc220246b",
+  "shared_authorization_sha256": "565dddb289f6ea5eee1a3c8f105be5bfdfd4e49117f7d04ff6da63f3aeb8472d"
+}

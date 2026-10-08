@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    "BBBP",
+    "SIDER",
+    "Tox21",
+    "HIV",
+    "ToxCast"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "alphas": [
+    0.1,
+    0.5,
+    1.0
+  ],
+  "clients": 4,
+  "permutations": 1000,
+  "canonicalization": "RDKit canonical isomeric SMILES; retain all fragments, charges, isotopes and stereochemistry",
+  "normalization": "No neutralization, tautomer or salt normalization; no deduplication",
+  "statistic": "sample-weighted JS divergence, natural logs, stored allocation scaffold labels",
+  "null": "random permutation of train scaffold labels over fixed client assignment slots",
+  "empty_scaffold": "retained; audit stored-group correspondence separately",
+  "source_sha256": "83c8738c5f065f0e7e96aef992340e7d77724cca0dcfe0a29c770bf762591a43",
+  "no_training": true,
+  "no_predictions_or_test_scores_used": true
+}

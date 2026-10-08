@@ -1,0 +1,47 @@
+[
+  {
+    "dataset": "BBBP",
+    "n": 2039,
+    "cache": "results/reviewer_revision_20260831/deadline_queue_20260920/central_mpnn/bundle/data/BBBP/graphs.bin",
+    "cache_sha256": "369e23079d5237292356e7f00457ca67aee51e8126ab82de4947a2fde0e80e1c",
+    "public_sha256": "d07a38487aeac5cee5508413e468043ef3097451d2a112701c2d60be9ec6b662",
+    "scaffold_sha256": "5e5546e06066ae062e6fac6ef1f501625a82b61d603d9b8140f459888472123d",
+    "parse_failure_indices": []
+  },
+  {
+    "dataset": "SIDER",
+    "n": 1427,
+    "cache": "results/reviewer_revision_20260831/deadline_queue_20260920/central_mpnn/bundle/data/SIDER/graphs.bin",
+    "cache_sha256": "44dd030dee38cdb8de8a3d8cb4395e9ccb35ee1f8cdf6a3471246ec0371bfbaf",
+    "public_sha256": "71efc6ac4ca82d6545bc512509863281be0f17234afd7adaf71a71899988302e",
+    "scaffold_sha256": "b68aa83de577cd939c4b6f00d7b7c74ee95cebc0fb551319c1af5269e77d7c1a",
+    "parse_failure_indices": []
+  },
+  {
+    "dataset": "Tox21",
+    "n": 7831,
+    "cache": "results/reviewer_revision_20260831/deadline_queue_20260920/central_mpnn/bundle/data/Tox21/graphs.bin",
+    "cache_sha256": "87364d5e28562ab7de2fcdea7243f43ccaa47bf35ca96d0481ddedf683455749",
+    "public_sha256": "45d09792492ce049039dd24aa27b07fc79ce20c573187d4d90bcd178c0c0d360",
+    "scaffold_sha256": "23a873cc6678254cd0605b1aeb47c4bd66838aaf50bf0302663344d8d621fd7f",
+    "parse_failure_indices": []
+  },
+  {
+    "dataset": "HIV",
+    "n": 41127,
+    "cache": "results/reviewer_revision_20260831/deadline_queue_20260920/central_mpnn/bundle/data/HIV/graphs.bin",
+    "cache_sha256": "7b0accb9a449af8f2300b112c1c65f956e4bdc430a97144865a56aa22c727149",
+    "public_sha256": "9ffa7fe57dc86c342627ee1d5255e937e2ab812393c73c4d16c697022f6e1d22",
+    "scaffold_sha256": "383beb500c23b8d831d2f8fa179f139d39a24ecc45c603743e4acbadf4908b91",
+    "parse_failure_indices": []
+  },
+  {
+    "dataset": "ToxCast",
+    "n": 8577,
+    "cache": "results/reviewer_revision_20260831/deadline_queue_20260920/central_mpnn/bundle/data/ToxCast/graphs.bin",
+    "cache_sha256": "41e00a0f7d8163c01cdd0ef5962c747f1dbcd3e34567dc4f0015e59b2d0b681c",
+    "public_sha256": "666d36476ff8f3208a618409022c1cc8cc7cd136e39b300320745509e0377db6",
+    "scaffold_sha256": "e5e1005151b747bc95f1ed5d9cff71fa22bc999e0c9aa9d34dec7abc596f027e",
+    "parse_failure_indices": []
+  }
+]

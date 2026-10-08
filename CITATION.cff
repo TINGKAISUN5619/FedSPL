@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite this version of the FedSPL research software and acknowledge the upstream projects and datasets."
+type: software
+title: "FedSPL: Structure Prototype Learning for Federated Molecular Property Prediction under Scaffold Heterogeneity"
+authors:
+  - family-names: Sun
+    given-names: Tingkai
+  - family-names: Ye
+    given-names: Xiucai
+  - family-names: Sakurai
+    given-names: Tetsuya
+repository-code: "https://github.com/TINGKAISUN5619/FedSPL"
+keywords:
+  - federated learning
+  - molecular property prediction
+  - structure prototypes
+  - scaffold heterogeneity

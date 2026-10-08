@@ -1,0 +1,167 @@
+{
+  "ToxCast_stereochemical_mapping": {
+    "stored_groups": 2509,
+    "fresh_isomeric_murcko_groups": 2509,
+    "stored_to_multiple_fresh": 0,
+    "fresh_to_multiple_stored": 0,
+    "empty_scaffold_rows": 1
+  },
+  "BBBP_heldout_identity": [
+    {
+      "seed": 0,
+      "test_n": 204,
+      "train_seen_test_rows": 12,
+      "unseen_test_n": 192,
+      "train_seen_test_fraction": 0.058823529411764705,
+      "matching_training_label_test_rows": [
+        1060,
+        448,
+        611,
+        1647,
+        659,
+        560,
+        33,
+        32
+      ],
+      "conflicting_training_label_test_rows": [
+        547,
+        1630,
+        1866,
+        1346
+      ],
+      "seen_test_dataset_indices": [
+        1060,
+        547,
+        1630,
+        448,
+        611,
+        1647,
+        659,
+        1866,
+        560,
+        33,
+        32,
+        1346
+      ],
+      "seen_test_public_indices": [
+        1071,
+        550,
+        1641,
+        451,
+        615,
+        1658,
+        669,
+        1877,
+        563,
+        33,
+        32,
+        1357
+      ],
+      "unseen_test_label_counts": {
+        "0": 56,
+        "1": 136
+      }
+    },
+    {
+      "seed": 1,
+      "test_n": 204,
+      "train_seen_test_rows": 12,
+      "unseen_test_n": 192,
+      "train_seen_test_fraction": 0.058823529411764705,
+      "matching_training_label_test_rows": [
+        79,
+        642,
+        687,
+        1964,
+        410,
+        562,
+        586,
+        1072
+      ],
+      "conflicting_training_label_test_rows": [
+        1630,
+        1686,
+        1346,
+        1366
+      ],
+      "seen_test_dataset_indices": [
+        79,
+        642,
+        1630,
+        687,
+        1964,
+        410,
+        1686,
+        1346,
+        1366,
+        562,
+        586,
+        1072
+      ],
+      "seen_test_public_indices": [
+        81,
+        652,
+        1641,
+        698,
+        1975,
+        413,
+        1697,
+        1357,
+        1377,
+        565,
+        589,
+        1083
+      ],
+      "unseen_test_label_counts": {
+        "0": 42,
+        "1": 150
+      }
+    },
+    {
+      "seed": 2,
+      "test_n": 204,
+      "train_seen_test_rows": 8,
+      "unseen_test_n": 196,
+      "train_seen_test_fraction": 0.0392156862745098,
+      "matching_training_label_test_rows": [
+        51,
+        97,
+        528,
+        79,
+        389,
+        49
+      ],
+      "conflicting_training_label_test_rows": [
+        124,
+        98
+      ],
+      "seen_test_dataset_indices": [
+        51,
+        124,
+        97,
+        528,
+        98,
+        79,
+        389,
+        49
+      ],
+      "seen_test_public_indices": [
+        51,
+        126,
+        99,
+        531,
+        100,
+        81,
+        392,
+        49
+      ],
+      "unseen_test_label_counts": {
+        "0": 51,
+        "1": 145
+      }
+    }
+  ],
+  "no_scores_or_models_used": true,
+  "no_data_or_split_changes": true,
+  "script_sha256": "c4cc0078695878c66cca2d791052251bf5e530759ba5fda5534151c3e5277ff6"
+}

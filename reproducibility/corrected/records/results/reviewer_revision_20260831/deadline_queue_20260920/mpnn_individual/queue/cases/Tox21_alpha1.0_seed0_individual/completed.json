@@ -1,0 +1,22 @@
+{
+  "blocks": 50,
+  "case": {
+    "alpha": 1.0,
+    "case_id": "Tox21_alpha1.0_seed0_individual",
+    "dataset": "Tox21",
+    "seed": 0
+  },
+  "files": {
+    "client_models.pt": "9d7d694df745e51589e13822d5367b5071b6fa62943bc21d934ca9ecb8e90663",
+    "final_predictions.npz": "716b7488627be9f34b3120b399e6c6c38176ba7412912eb7515590e2304b8c06",
+    "metric_curves.csv": "e3ffb3f50c09b6d462a92001544a84ce653fc0f3556b9930790768962e875db7",
+    "spec.json": "4da2b0cc145250eb7599ae718b462b7019c09e8e8069acfb7cdf4771b0ce818a",
+    "split_audit.json": "91bbeeff2dd4038a5551942215f2bb4da1cf90ef824f8f26b11c13b33296408a",
+    "training_trace.csv": "a81493398447ac7b2e98e62e3eb55636e150d1b8e0eb0d41a20800e5cd11e98a",
+    "validation_selection.json": "3042ddfd27428d8589c66e31c2618db873f0909f9032925b5ea2c8d84d9a6a1c"
+  },
+  "formal": true,
+  "protocol": "mpnn_individual_reviewer_v3_20260922_v1",
+  "seconds": 3526.636729605496,
+  "steps": 200
+}

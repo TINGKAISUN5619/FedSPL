@@ -1,0 +1,116 @@
+{
+  "documents": [
+    {
+      "source": "paper_acs_latex/main.tex",
+      "sha256": "988465936d3c542b0f224a68a34a59eb88819cb511c29ec2334ea14232dddce2",
+      "labels": [
+        "fig:federated_system",
+        "eq:prelim_fl_obj",
+        "eq:prelim_fedavg",
+        "alg:federated_learning",
+        "fig:scaffold",
+        "eq:prelim_class_proto",
+        "eq:prelim_proto_prob",
+        "eq:local_dataset",
+        "eq:masked_batch_loss",
+        "eq:global_prototype_set",
+        "fig:overview",
+        "eq:descriptor_embedding",
+        "eq:local_descriptor",
+        "eq:local_embedding",
+        "eq:local_prototype_upload",
+        "eq:spl_model_average",
+        "eq:global_descriptor",
+        "eq:global_embedding",
+        "eq:prototype_match",
+        "eq:prototype_batch_loss",
+        "eq:combined_loss",
+        "alg:fedspl",
+        "eq:masked_auc",
+        "fig:multidataset_convergence",
+        "eq:label_proto_comm",
+        "eq:structure_proto_comm",
+        "fig:tox21_task_auc",
+        "fig:sider_count_support"
+      ],
+      "inputs": [
+        "dataset_statistics_generated.tex",
+        "main_results_table_generated.tex",
+        "regression_results_table_generated.tex"
+      ]
+    },
+    {
+      "source": "paper_acs_latex/supplementary_information.tex",
+      "sha256": "1d7a0aea37816e85e4de6679dd6dc0689b21b8f346d6eae7fe6bf82c8400f770",
+      "labels": [
+        "sec:si_traditional",
+        "sec:si_mechanism",
+        "sec:si_robustness",
+        "sec:si_official",
+        "sec:si_individual",
+        "tab:individual_mpnn",
+        "sec:si_mmgnn"
+      ],
+      "inputs": [
+        "supplement_sections/traditional_ml.tex",
+        "supplement_sections/mechanism.tex",
+        "supplement_sections/robustness.tex",
+        "supplement_sections/official_reference.tex",
+        "individual_rows_generated.tex",
+        "supplement_mmgnn.tex"
+      ]
+    },
+    {
+      "source": "paper_acs_latex/supplement_sections/mechanism.tex",
+      "sha256": "0153034c8e718f1c264ef7e8e1d4db33ff693f21d0965ab1e046e7aee277daab",
+      "labels": [],
+      "inputs": [
+        "mechanism_endpoints_generated.tex",
+        "mechanism_server_generated.tex",
+        "mechanism_clients_mean_generated.tex"
+      ]
+    },
+    {
+      "source": "paper_acs_latex/supplement_sections/official_reference.tex",
+      "sha256": "b760c120a7ce63fd1a2af90191abd70a33522afeb91c1949a663618bbb2e6b21",
+      "labels": [],
+      "inputs": [
+        "official_reference_tables_generated.tex"
+      ]
+    },
+    {
+      "source": "paper_acs_latex/supplement_sections/robustness.tex",
+      "sha256": "a3b0e99a34219995b223e3b1cfabdb1a50db9df18e80e72b1b622fa31a393f0a",
+      "labels": [
+        "tab:prototype_implementations"
+      ],
+      "inputs": [
+        "robustness_encoder_generated.tex",
+        "robustness_descriptor_generated.tex"
+      ]
+    },
+    {
+      "source": "paper_acs_latex/supplement_sections/traditional_ml.tex",
+      "sha256": "59b5d47a0aedbba915e905a7d67a897dd8ed539e68772570eb075e1e7440ef3b",
+      "labels": [],
+      "inputs": [
+        "traditional_local_table_generated.tex"
+      ]
+    },
+    {
+      "source": "paper_acs_latex/supplement_mmgnn.tex",
+      "sha256": "7da30648b1666a0fb4a8c0e64530817bcf5c35658f889c834bb5a1333a353679",
+      "labels": [
+        "tab:mmgnn_server",
+        "tab:mmgnn_seeds",
+        "tab:mmgnn_clients"
+      ],
+      "inputs": [
+        "mmgnn_server_rows_generated.tex",
+        "mmgnn_seed_rows_generated.tex",
+        "mmgnn_client_rows_generated.tex"
+      ]
+    }
+  ],
+  "omitted": []
+}

@@ -1,0 +1,1129 @@
+[2026-09-01T07:11:55+09:00] START index=49 gpu=0 suite=k_occupancy case=k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32
+Using backend: pytorch
+INFO:root:*********partition data***************
+INFO:root:N = 1141
+INFO:root:train_dl_global number = 17
+INFO:root:test_dl_global number = 5
+INFO:root:client_idx = 0, local_sample_number = 234
+INFO:root:client_idx = 0, batch_num_train_local = 3; local test disabled
+INFO:root:client_idx = 1, local_sample_number = 287
+INFO:root:client_idx = 1, batch_num_train_local = 4; local test disabled
+INFO:root:client_idx = 2, local_sample_number = 287
+INFO:root:client_idx = 2, batch_num_train_local = 4; local test disabled
+INFO:root:client_idx = 3, local_sample_number = 333
+INFO:root:client_idx = 3, batch_num_train_local = 5; local test disabled
+INFO:root:Local CSV results will be written to DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:############setup_clients (START)#############
+INFO:root:self.local_sample_number = 234
+INFO:root:self.local_sample_number = 287
+INFO:root:self.local_sample_number = 287
+INFO:root:self.local_sample_number = 333
+INFO:root:############setup_clients (END)#############
+INFO:root:########## fedavg_proto Communication round : 0 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=0, use_proto=False, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=False)
+INFO:root:[Client 1] TopoFedProto train finished: round=0, use_proto=False, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=False)
+INFO:root:[Client 2] TopoFedProto train finished: round=0, use_proto=False, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=False)
+INFO:root:[Client 3] TopoFedProto train finished: round=0, use_proto=False, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=False)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=False
+INFO:root:Round 0 aggregated 32 global topology prototypes
+Loading previously saved dgl graphs...
+(2,)
+(12,)
+(64,)
+(42,)
+Namespace(alpha_kd=0.7, clients_per_round=4, comm_round=50, dataset='SIDER', detect_anomaly=False, distill_node_dropout=0.0, distill_target='client', distill_warmup_rounds=1, encoder='mpnn', eval_all_clients=False, eval_frequency=1, fedavg_validate_clients=False, fedmid='fedavg_proto', fedproto_lambda=0.1, fedprox_mu=0.01, fedtgp_lr=0.01, fedtgp_steps=20, fedtgp_tau=0.2, global_only_eval=True, lambda_feat=0.0, lambda_proto=0.1, lambda_rep=0.1, lambda_task_proto=0.0, lambdavat=0.5, local_steps_per_round=200, logit_teacher_mode='avg', moon_mu=1.0, moon_tau=0.5, numClient=4, num_workers=0, part_alpha=0.5, partition_method='hetero', partition_seed=1, proto_descriptor_space='fingerprint', proto_validate_global=False, public_sample_size=512, public_supervised_weight=1.0, random_descriptor_dim=2048, rep_tau=0.2, rep_teacher_space='svd', rep_top_k=0, results_dir='DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32', seed=1, selective_logit_floor=0.02, selective_logit_gamma=2.0, selective_min_weight=0.05, selective_sample_rho=1.0, selective_tau=1.0, selective_topo_weight=0.5, server_distill_epochs=1, server_distill_lr=0.0001, server_init='previous', skip_client_eval=False, split_seed=1, svd_eta=0.5, svd_rank=16, task_proto_min_count=2, teacher_mode='global', teacher_sample_rho=1.0, teacher_weighting='sample', temperature=1.0, tmpFed=0.5, topo_beta=0.3, topo_top_k=20, topoproto_clusters=32, topoproto_global_clusters=32, topoproto_match='hard', topoproto_tau=0.2, weightReg=1, xi=0.001)
+{'dataset': 'SIDER', 'fedmid': 'fedavg_proto', 'comm_round': 50, 'numClient': 4, 'tmpFed': 0.5, 'weightReg': 1, 'lambdavat': 0.5, 'xi': 0.001, 'part_alpha': 0.5, 'seed': 1, 'split_seed': 1, 'partition_seed': 1, 'partition_method': 'hetero', 'encoder': 'mpnn', 'distill_warmup_rounds': 1, 'public_sample_size': 512, 'topo_beta': 0.3, 'topo_top_k': 20, 'topoproto_clusters': 32, 'topoproto_global_clusters': 32, 'lambda_proto': 0.1, 'topoproto_match': 'hard', 'topoproto_tau': 0.2, 'proto_descriptor_space': 'fingerprint', 'random_descriptor_dim': 2048, 'svd_rank': 16, 'svd_eta': 0.5, 'rep_teacher_space': 'svd', 'lambda_rep': 0.1, 'lambda_feat': 0.0, 'rep_top_k': 0, 'rep_tau': 0.2, 'logit_teacher_mode': 'avg', 'selective_logit_gamma': 2.0, 'selective_logit_floor': 0.02, 'lambda_task_proto': 0.0, 'task_proto_min_count': 2, 'fedproto_lambda': 0.1, 'moon_mu': 1.0, 'moon_tau': 0.5, 'fedtgp_lr': 0.01, 'fedtgp_steps': 20, 'fedtgp_tau': 0.2, 'fedprox_mu': 0.01, 'temperature': 1.0, 'alpha_kd': 0.7, 'public_supervised_weight': 1.0, 'distill_target': 'client', 'server_distill_epochs': 1, 'server_distill_lr': 0.0001, 'server_init': 'previous', 'teacher_mode': 'global', 'teacher_weighting': 'sample', 'teacher_sample_rho': 1.0, 'selective_topo_weight': 0.5, 'selective_tau': 1.0, 'selective_sample_rho': 1.0, 'selective_min_weight': 0.05, 'results_dir': 'DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32', 'local_steps_per_round': 200, 'global_only_eval': True, 'eval_all_clients': False, 'eval_frequency': 1, 'num_workers': 0, 'clients_per_round': 4, 'detect_anomaly': False, 'distill_node_dropout': 0.0, 'proto_validate_global': False, 'fedavg_validate_clients': False, 'skip_client_eval': False, 'numWorker': 0, 'frequency_of_the_test': 1, 'client_num_in_total': 4, 'client_num_per_round': 4, 'client_optimizer': 'adam', 'batch_size': 64, 'model_seed': 1, 'epochs': 1000, 'localStepsPerRound': 200, 'partition_alpha': 0.5}
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 0 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 0 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 0 Iter: 1 / 5:  40%|████      | 2/5 [00:00<00:00, 14.54it/s]Round: 0 Iter: 2 / 5:  40%|████      | 2/5 [00:00<00:00, 14.54it/s]Round: 0 Iter: 3 / 5:  40%|████      | 2/5 [00:00<00:00, 14.54it/s]Round: 0 Iter: 4 / 5:  40%|████      | 2/5 [00:00<00:00, 14.54it/s]Round: 0 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 20.75it/s]Round: 0 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 19.73it/s]
+INFO:root:01/09/2026 07:13:30
+cur Val Steps: 0 auc 0.5447735263206053 std 0.09091207209797895
+cur Test Steps: 0 auc 0.538377950838284 std 0.06944731067836729
+best Val Steps: 0 auc 0.5447735263206053
+best Test Steps: 0 auc 0.538377950838284
+detail results[]
+
+[Round 0] fedavg_proto val_auc=0.5448, test_auc=0.5384, best_test=0.5384, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 1 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=1, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=1, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=1, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=1, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 1 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 1 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 1 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 1 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 1 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 27.03it/s]Round: 1 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 27.03it/s]Round: 1 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 27.03it/s]Round: 1 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 29.70it/s]
+INFO:root:01/09/2026 07:14:24
+cur Val Steps: 1 auc 0.580549004443864 std 0.0878119299814937
+cur Test Steps: 1 auc 0.5622530914988537 std 0.06864196431387884
+best Val Steps: 1 auc 0.580549004443864
+best Test Steps: 1 auc 0.5622530914988537
+detail results[]
+
+[Round 1] fedavg_proto val_auc=0.5805, test_auc=0.5623, best_test=0.5623, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 2 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=2, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=2, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=2, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=2, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 2 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 2 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 2 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 2 Iter: 1 / 5:  40%|████      | 2/5 [00:00<00:00, 13.42it/s]Round: 2 Iter: 2 / 5:  40%|████      | 2/5 [00:00<00:00, 13.42it/s]Round: 2 Iter: 3 / 5:  40%|████      | 2/5 [00:00<00:00, 13.42it/s]Round: 2 Iter: 3 / 5:  80%|████████  | 4/5 [00:00<00:00, 16.22it/s]Round: 2 Iter: 4 / 5:  80%|████████  | 4/5 [00:00<00:00, 16.22it/s]Round: 2 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 17.88it/s]
+INFO:root:01/09/2026 07:15:17
+cur Val Steps: 2 auc 0.5878373548733599 std 0.08593482125694987
+cur Test Steps: 2 auc 0.5663389301204301 std 0.06839232049425162
+best Val Steps: 2 auc 0.5878373548733599
+best Test Steps: 2 auc 0.5663389301204301
+detail results[]
+
+[Round 2] fedavg_proto val_auc=0.5878, test_auc=0.5663, best_test=0.5663, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 3 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=3, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=3, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=3, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=3, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 3 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 3 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 3 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 3 Iter: 1 / 5:  40%|████      | 2/5 [00:00<00:00, 13.21it/s]Round: 3 Iter: 2 / 5:  40%|████      | 2/5 [00:00<00:00, 13.21it/s]Round: 3 Iter: 3 / 5:  40%|████      | 2/5 [00:00<00:00, 13.21it/s]Round: 3 Iter: 4 / 5:  40%|████      | 2/5 [00:00<00:00, 13.21it/s]Round: 3 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 18.41it/s]Round: 3 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 17.57it/s]
+INFO:root:01/09/2026 07:16:12
+cur Val Steps: 3 auc 0.6081366641411732 std 0.09315359324241856
+cur Test Steps: 3 auc 0.5826617110650786 std 0.07744209317470946
+best Val Steps: 3 auc 0.6081366641411732
+best Test Steps: 3 auc 0.5826617110650786
+detail results[]
+
+[Round 3] fedavg_proto val_auc=0.6081, test_auc=0.5827, best_test=0.5827, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 4 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=4, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=4, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=4, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=4, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 4 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 4 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 4 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 4 Iter: 1 / 5:  40%|████      | 2/5 [00:00<00:00, 16.58it/s]Round: 4 Iter: 2 / 5:  40%|████      | 2/5 [00:00<00:00, 16.58it/s]Round: 4 Iter: 3 / 5:  40%|████      | 2/5 [00:00<00:00, 16.58it/s]Round: 4 Iter: 3 / 5:  80%|████████  | 4/5 [00:00<00:00, 17.36it/s]Round: 4 Iter: 4 / 5:  80%|████████  | 4/5 [00:00<00:00, 17.36it/s]Round: 4 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 16.49it/s]
+INFO:root:01/09/2026 07:17:07
+cur Val Steps: 4 auc 0.6138130023668237 std 0.10488110622343275
+cur Test Steps: 4 auc 0.5970299867381382 std 0.0736234720895585
+best Val Steps: 4 auc 0.6138130023668237
+best Test Steps: 4 auc 0.5970299867381382
+detail results[]
+
+[Round 4] fedavg_proto val_auc=0.6138, test_auc=0.5970, best_test=0.5970, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 5 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=5, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=5, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=5, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=5, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 5 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 5 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 5 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 5 Iter: 1 / 5:  40%|████      | 2/5 [00:00<00:00, 15.41it/s]Round: 5 Iter: 2 / 5:  40%|████      | 2/5 [00:00<00:00, 15.41it/s]Round: 5 Iter: 3 / 5:  40%|████      | 2/5 [00:00<00:00, 15.41it/s]Round: 5 Iter: 4 / 5:  40%|████      | 2/5 [00:00<00:00, 15.41it/s]Round: 5 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 19.89it/s]Round: 5 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 19.21it/s]
+INFO:root:01/09/2026 07:18:10
+cur Val Steps: 5 auc 0.6093871332015941 std 0.10438530540443655
+cur Test Steps: 5 auc 0.6035558157997912 std 0.06469336428659583
+best Val Steps: 5 auc 0.6138130023668237
+best Test Steps: 5 auc 0.5970299867381382
+detail results[]
+
+[Round 5] fedavg_proto val_auc=0.6094, test_auc=0.6036, best_test=0.5970, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 6 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=6, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=6, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=6, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=6, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 6 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 6 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 6 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 6 Iter: 1 / 5:  40%|████      | 2/5 [00:00<00:00, 15.10it/s]Round: 6 Iter: 2 / 5:  40%|████      | 2/5 [00:00<00:00, 15.10it/s]Round: 6 Iter: 3 / 5:  40%|████      | 2/5 [00:00<00:00, 15.10it/s]Round: 6 Iter: 3 / 5:  80%|████████  | 4/5 [00:00<00:00, 16.05it/s]Round: 6 Iter: 4 / 5:  80%|████████  | 4/5 [00:00<00:00, 16.05it/s]Round: 6 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 17.09it/s]
+INFO:root:01/09/2026 07:19:08
+cur Val Steps: 6 auc 0.6012718111392283 std 0.11028199811460893
+cur Test Steps: 6 auc 0.5967207277169915 std 0.06938445587512022
+best Val Steps: 6 auc 0.6138130023668237
+best Test Steps: 6 auc 0.5970299867381382
+detail results[]
+
+[Round 6] fedavg_proto val_auc=0.6013, test_auc=0.5967, best_test=0.5970, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 7 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=7, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=7, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=7, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=7, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 7 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 7 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 7 Iter: 0 / 5:  20%|██        | 1/5 [00:00<00:00,  6.42it/s]Round: 7 Iter: 1 / 5:  20%|██        | 1/5 [00:00<00:00,  6.42it/s]Round: 7 Iter: 2 / 5:  20%|██        | 1/5 [00:00<00:00,  6.42it/s]Round: 7 Iter: 3 / 5:  20%|██        | 1/5 [00:00<00:00,  6.42it/s]Round: 7 Iter: 4 / 5:  20%|██        | 1/5 [00:00<00:00,  6.42it/s]Round: 7 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 19.50it/s]Round: 7 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 17.37it/s]
+INFO:root:01/09/2026 07:20:09
+cur Val Steps: 7 auc 0.5993377379937921 std 0.1118363168179357
+cur Test Steps: 7 auc 0.5956920959373384 std 0.06873032037135961
+best Val Steps: 7 auc 0.6138130023668237
+best Test Steps: 7 auc 0.5970299867381382
+detail results[]
+
+[Round 7] fedavg_proto val_auc=0.5993, test_auc=0.5957, best_test=0.5970, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 8 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=8, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=8, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=8, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=8, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 8 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 8 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 8 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 8 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 8 Iter: 3 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 8 Iter: 4 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 8 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 65.93it/s]
+INFO:root:01/09/2026 07:21:11
+cur Val Steps: 8 auc 0.6016052762228689 std 0.10728373109727223
+cur Test Steps: 8 auc 0.5886235696627701 std 0.06301962593727274
+best Val Steps: 8 auc 0.6138130023668237
+best Test Steps: 8 auc 0.5970299867381382
+detail results[]
+
+[Round 8] fedavg_proto val_auc=0.6016, test_auc=0.5886, best_test=0.5970, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 9 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=9, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=9, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=9, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=9, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 9 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 9 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 9 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 9 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 9 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 20.85it/s]Round: 9 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 20.85it/s]Round: 9 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 20.85it/s]Round: 9 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 21.74it/s]
+INFO:root:01/09/2026 07:22:05
+cur Val Steps: 9 auc 0.605947361882354 std 0.10086583514199525
+cur Test Steps: 9 auc 0.5814520732100302 std 0.05866246383159613
+best Val Steps: 9 auc 0.6138130023668237
+best Test Steps: 9 auc 0.5970299867381382
+detail results[]
+
+[Round 9] fedavg_proto val_auc=0.6059, test_auc=0.5815, best_test=0.5970, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 10 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=10, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=10, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=10, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=10, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 10 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 10 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 10 Iter: 0 / 5:  20%|██        | 1/5 [00:00<00:00,  8.04it/s]Round: 10 Iter: 1 / 5:  20%|██        | 1/5 [00:00<00:00,  8.04it/s]Round: 10 Iter: 2 / 5:  20%|██        | 1/5 [00:00<00:00,  8.04it/s]Round: 10 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 10.75it/s]Round: 10 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 10.75it/s]Round: 10 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 10.75it/s]Round: 10 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 12.28it/s]Round: 10 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 11.64it/s]
+INFO:root:01/09/2026 07:23:10
+cur Val Steps: 10 auc 0.6102905275339003 std 0.09957147872529751
+cur Test Steps: 10 auc 0.5798022706862573 std 0.05373651682874806
+best Val Steps: 10 auc 0.6138130023668237
+best Test Steps: 10 auc 0.5970299867381382
+detail results[]
+
+[Round 10] fedavg_proto val_auc=0.6103, test_auc=0.5798, best_test=0.5970, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 11 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=11, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=11, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=11, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=11, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 11 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 11 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 11 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 11 Iter: 1 / 5:  40%|████      | 2/5 [00:00<00:00, 17.88it/s]Round: 11 Iter: 2 / 5:  40%|████      | 2/5 [00:00<00:00, 17.88it/s]Round: 11 Iter: 3 / 5:  40%|████      | 2/5 [00:00<00:00, 17.88it/s]Round: 11 Iter: 3 / 5:  80%|████████  | 4/5 [00:00<00:00, 18.65it/s]Round: 11 Iter: 4 / 5:  80%|████████  | 4/5 [00:00<00:00, 18.65it/s]Round: 11 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 20.01it/s]
+INFO:root:01/09/2026 07:24:07
+cur Val Steps: 11 auc 0.6138350796547963 std 0.09739659019846554
+cur Test Steps: 11 auc 0.5918726448624622 std 0.05404147476703026
+best Val Steps: 11 auc 0.6138350796547963
+best Test Steps: 11 auc 0.5918726448624622
+detail results[]
+
+[Round 11] fedavg_proto val_auc=0.6138, test_auc=0.5919, best_test=0.5919, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 12 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=12, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=12, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=12, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=12, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 12 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 12 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 12 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 12 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 12 Iter: 3 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 12 Iter: 3 / 5:  80%|████████  | 4/5 [00:00<00:00, 33.60it/s]Round: 12 Iter: 4 / 5:  80%|████████  | 4/5 [00:00<00:00, 33.60it/s]Round: 12 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 35.96it/s]
+INFO:root:01/09/2026 07:25:11
+cur Val Steps: 12 auc 0.6158235119128611 std 0.10005609597283031
+cur Test Steps: 12 auc 0.6029166291486207 std 0.05504673976895825
+best Val Steps: 12 auc 0.6158235119128611
+best Test Steps: 12 auc 0.6029166291486207
+detail results[]
+
+[Round 12] fedavg_proto val_auc=0.6158, test_auc=0.6029, best_test=0.6029, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 13 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=13, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=13, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=13, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=13, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 13 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 13 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 13 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 13 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 13 Iter: 3 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 13 Iter: 3 / 5:  80%|████████  | 4/5 [00:00<00:00, 33.31it/s]Round: 13 Iter: 4 / 5:  80%|████████  | 4/5 [00:00<00:00, 33.31it/s]Round: 13 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 37.41it/s]
+INFO:root:01/09/2026 07:26:12
+cur Val Steps: 13 auc 0.6176067474335697 std 0.09895570671385424
+cur Test Steps: 13 auc 0.6080810235418554 std 0.05647508319421497
+best Val Steps: 13 auc 0.6176067474335697
+best Test Steps: 13 auc 0.6080810235418554
+detail results[]
+
+[Round 13] fedavg_proto val_auc=0.6176, test_auc=0.6081, best_test=0.6081, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 14 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=14, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=14, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=14, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=14, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 14 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 14 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 14 Iter: 0 / 5:  20%|██        | 1/5 [00:00<00:00,  5.58it/s]Round: 14 Iter: 1 / 5:  20%|██        | 1/5 [00:00<00:00,  5.58it/s]Round: 14 Iter: 2 / 5:  20%|██        | 1/5 [00:00<00:00,  5.58it/s]Round: 14 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 11.63it/s]Round: 14 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 11.63it/s]Round: 14 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 11.63it/s]Round: 14 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 13.20it/s]
+INFO:root:01/09/2026 07:27:11
+cur Val Steps: 14 auc 0.6227363946000295 std 0.0979033701622298
+cur Test Steps: 14 auc 0.6144829932099409 std 0.05604710942248247
+best Val Steps: 14 auc 0.6227363946000295
+best Test Steps: 14 auc 0.6144829932099409
+detail results[]
+
+[Round 14] fedavg_proto val_auc=0.6227, test_auc=0.6145, best_test=0.6145, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 15 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=15, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=15, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=15, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=15, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 15 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 15 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 15 Iter: 0 / 5:  20%|██        | 1/5 [00:00<00:00,  4.74it/s]Round: 15 Iter: 1 / 5:  20%|██        | 1/5 [00:00<00:00,  4.74it/s]Round: 15 Iter: 2 / 5:  20%|██        | 1/5 [00:00<00:00,  4.74it/s]Round: 15 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00,  9.51it/s]Round: 15 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00,  9.51it/s]Round: 15 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00,  9.51it/s]Round: 15 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 12.24it/s]Round: 15 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 10.72it/s]
+INFO:root:01/09/2026 07:28:11
+cur Val Steps: 15 auc 0.6238224792395172 std 0.10020022150926314
+cur Test Steps: 15 auc 0.6198525281243759 std 0.05563414390447901
+best Val Steps: 15 auc 0.6238224792395172
+best Test Steps: 15 auc 0.6198525281243759
+detail results[]
+
+[Round 15] fedavg_proto val_auc=0.6238, test_auc=0.6199, best_test=0.6199, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 16 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=16, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=16, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=16, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=16, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 16 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 16 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 16 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 16 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 16 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 29.13it/s]Round: 16 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 29.13it/s]Round: 16 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 29.13it/s]Round: 16 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 30.37it/s]
+INFO:root:01/09/2026 07:29:11
+cur Val Steps: 16 auc 0.6266953415897398 std 0.09822425267529192
+cur Test Steps: 16 auc 0.623602330033065 std 0.05596784082690821
+best Val Steps: 16 auc 0.6266953415897398
+best Test Steps: 16 auc 0.623602330033065
+detail results[]
+
+[Round 16] fedavg_proto val_auc=0.6267, test_auc=0.6236, best_test=0.6236, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 17 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=17, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=17, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=17, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=17, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 17 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 17 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 17 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 17 Iter: 1 / 5:  40%|████      | 2/5 [00:00<00:00, 11.93it/s]Round: 17 Iter: 2 / 5:  40%|████      | 2/5 [00:00<00:00, 11.93it/s]Round: 17 Iter: 3 / 5:  40%|████      | 2/5 [00:00<00:00, 11.93it/s]Round: 17 Iter: 4 / 5:  40%|████      | 2/5 [00:00<00:00, 11.93it/s]Round: 17 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 21.16it/s]
+INFO:root:01/09/2026 07:30:08
+cur Val Steps: 17 auc 0.6284653416117201 std 0.09717233500824171
+cur Test Steps: 17 auc 0.6219126563320823 std 0.05339935572545365
+best Val Steps: 17 auc 0.6284653416117201
+best Test Steps: 17 auc 0.6219126563320823
+detail results[]
+
+[Round 17] fedavg_proto val_auc=0.6285, test_auc=0.6219, best_test=0.6219, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 18 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=18, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=18, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=18, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=18, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 18 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 18 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 18 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 18 Iter: 1 / 5:  40%|████      | 2/5 [00:00<00:00, 11.61it/s]Round: 18 Iter: 2 / 5:  40%|████      | 2/5 [00:00<00:00, 11.61it/s]Round: 18 Iter: 3 / 5:  40%|████      | 2/5 [00:00<00:00, 11.61it/s]Round: 18 Iter: 4 / 5:  40%|████      | 2/5 [00:00<00:00, 11.61it/s]Round: 18 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 20.46it/s]
+INFO:root:01/09/2026 07:31:13
+cur Val Steps: 18 auc 0.6326670289924441 std 0.09737970932226919
+cur Test Steps: 18 auc 0.6198255813461165 std 0.051895781828664445
+best Val Steps: 18 auc 0.6326670289924441
+best Test Steps: 18 auc 0.6198255813461165
+detail results[]
+
+[Round 18] fedavg_proto val_auc=0.6327, test_auc=0.6198, best_test=0.6198, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 19 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=19, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=19, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=19, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=19, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 19 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 19 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 19 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 19 Iter: 1 / 5:  40%|████      | 2/5 [00:00<00:00, 14.63it/s]Round: 19 Iter: 2 / 5:  40%|████      | 2/5 [00:00<00:00, 14.63it/s]Round: 19 Iter: 3 / 5:  40%|████      | 2/5 [00:00<00:00, 14.63it/s]Round: 19 Iter: 3 / 5:  80%|████████  | 4/5 [00:00<00:00, 14.64it/s]Round: 19 Iter: 4 / 5:  80%|████████  | 4/5 [00:00<00:00, 14.64it/s]Round: 19 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 15.38it/s]
+INFO:root:01/09/2026 07:32:20
+cur Val Steps: 19 auc 0.6411995541777535 std 0.0990499929020619
+cur Test Steps: 19 auc 0.6170360284670201 std 0.05009901996655183
+best Val Steps: 19 auc 0.6411995541777535
+best Test Steps: 19 auc 0.6170360284670201
+detail results[]
+
+[Round 19] fedavg_proto val_auc=0.6412, test_auc=0.6170, best_test=0.6170, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 20 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=20, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=20, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=20, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=20, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 20 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 20 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 20 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 20 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 20 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 20.96it/s]Round: 20 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 20.96it/s]Round: 20 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 20.96it/s]Round: 20 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 18.09it/s]
+INFO:root:01/09/2026 07:33:21
+cur Val Steps: 20 auc 0.6421612063518393 std 0.09754751271004444
+cur Test Steps: 20 auc 0.6114179633941533 std 0.04642624683154642
+best Val Steps: 20 auc 0.6421612063518393
+best Test Steps: 20 auc 0.6114179633941533
+detail results[]
+
+[Round 20] fedavg_proto val_auc=0.6422, test_auc=0.6114, best_test=0.6114, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 21 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=21, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=21, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=21, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=21, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 21 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 21 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 21 Iter: 0 / 5:  20%|██        | 1/5 [00:00<00:00,  6.95it/s]Round: 21 Iter: 1 / 5:  20%|██        | 1/5 [00:00<00:00,  6.95it/s]Round: 21 Iter: 2 / 5:  20%|██        | 1/5 [00:00<00:00,  6.95it/s]Round: 21 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 13.05it/s]Round: 21 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 13.05it/s]Round: 21 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 13.05it/s]Round: 21 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 14.98it/s]Round: 21 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 13.70it/s]
+INFO:root:01/09/2026 07:34:22
+cur Val Steps: 21 auc 0.6506361525172752 std 0.09402712687500897
+cur Test Steps: 21 auc 0.6027695044253846 std 0.04717764844727984
+best Val Steps: 21 auc 0.6506361525172752
+best Test Steps: 21 auc 0.6027695044253846
+detail results[]
+
+[Round 21] fedavg_proto val_auc=0.6506, test_auc=0.6028, best_test=0.6028, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 22 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=22, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=22, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=22, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=22, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 22 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 22 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 22 Iter: 0 / 5:  20%|██        | 1/5 [00:00<00:00,  6.44it/s]Round: 22 Iter: 1 / 5:  20%|██        | 1/5 [00:00<00:00,  6.44it/s]Round: 22 Iter: 2 / 5:  20%|██        | 1/5 [00:00<00:00,  6.44it/s]Round: 22 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 10.01it/s]Round: 22 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 10.01it/s]Round: 22 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 10.01it/s]Round: 22 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 12.71it/s]
+INFO:root:01/09/2026 07:35:24
+cur Val Steps: 22 auc 0.6556365978249488 std 0.09384949996123483
+cur Test Steps: 22 auc 0.5995392842506309 std 0.04581062806351837
+best Val Steps: 22 auc 0.6556365978249488
+best Test Steps: 22 auc 0.5995392842506309
+detail results[]
+
+[Round 22] fedavg_proto val_auc=0.6556, test_auc=0.5995, best_test=0.5995, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 23 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=23, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=23, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=23, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=23, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 23 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 23 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 23 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 23 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 23 Iter: 3 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 23 Iter: 4 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 23 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 56.46it/s]
+INFO:root:01/09/2026 07:36:26
+cur Val Steps: 23 auc 0.6523583440033994 std 0.0919555575646882
+cur Test Steps: 23 auc 0.5888526980509524 std 0.04585610902038915
+best Val Steps: 23 auc 0.6556365978249488
+best Test Steps: 23 auc 0.5995392842506309
+detail results[]
+
+[Round 23] fedavg_proto val_auc=0.6524, test_auc=0.5889, best_test=0.5995, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 24 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=24, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=24, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=24, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=24, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 24 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 24 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 24 Iter: 0 / 5:  20%|██        | 1/5 [00:00<00:00,  9.37it/s]Round: 24 Iter: 1 / 5:  20%|██        | 1/5 [00:00<00:00,  9.37it/s]Round: 24 Iter: 2 / 5:  20%|██        | 1/5 [00:00<00:00,  9.37it/s]Round: 24 Iter: 3 / 5:  20%|██        | 1/5 [00:00<00:00,  9.37it/s]Round: 24 Iter: 3 / 5:  80%|████████  | 4/5 [00:00<00:00, 13.57it/s]Round: 24 Iter: 4 / 5:  80%|████████  | 4/5 [00:00<00:00, 13.57it/s]Round: 24 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 13.59it/s]
+INFO:root:01/09/2026 07:37:26
+cur Val Steps: 24 auc 0.6531922345163544 std 0.09333889914382767
+cur Test Steps: 24 auc 0.5880046661008532 std 0.04621227161251082
+best Val Steps: 24 auc 0.6556365978249488
+best Test Steps: 24 auc 0.5995392842506309
+detail results[]
+
+[Round 24] fedavg_proto val_auc=0.6532, test_auc=0.5880, best_test=0.5995, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 25 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=25, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=25, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=25, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=25, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 25 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 25 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 25 Iter: 0 / 5:  20%|██        | 1/5 [00:00<00:00,  9.71it/s]Round: 25 Iter: 1 / 5:  20%|██        | 1/5 [00:00<00:00,  9.71it/s]Round: 25 Iter: 2 / 5:  20%|██        | 1/5 [00:00<00:00,  9.71it/s]Round: 25 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 13.55it/s]Round: 25 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 13.55it/s]Round: 25 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 13.55it/s]Round: 25 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 16.79it/s]
+INFO:root:01/09/2026 07:38:23
+cur Val Steps: 25 auc 0.6501149039246338 std 0.08928818041646468
+cur Test Steps: 25 auc 0.5758201403155014 std 0.04618431822744106
+best Val Steps: 25 auc 0.6556365978249488
+best Test Steps: 25 auc 0.5995392842506309
+detail results[]
+
+[Round 25] fedavg_proto val_auc=0.6501, test_auc=0.5758, best_test=0.5995, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 26 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=26, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=26, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=26, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=26, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 26 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 26 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 26 Iter: 0 / 5:  20%|██        | 1/5 [00:00<00:00,  8.44it/s]Round: 26 Iter: 1 / 5:  20%|██        | 1/5 [00:00<00:00,  8.44it/s]Round: 26 Iter: 1 / 5:  40%|████      | 2/5 [00:00<00:00,  9.00it/s]Round: 26 Iter: 2 / 5:  40%|████      | 2/5 [00:00<00:00,  9.00it/s]Round: 26 Iter: 3 / 5:  40%|████      | 2/5 [00:00<00:00,  9.00it/s]Round: 26 Iter: 3 / 5:  80%|████████  | 4/5 [00:00<00:00, 13.18it/s]Round: 26 Iter: 4 / 5:  80%|████████  | 4/5 [00:00<00:00, 13.18it/s]Round: 26 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 13.64it/s]
+INFO:root:01/09/2026 07:39:19
+cur Val Steps: 26 auc 0.6581252803282609 std 0.0933325910306451
+cur Test Steps: 26 auc 0.5825329697232623 std 0.043924919540619424
+best Val Steps: 26 auc 0.6581252803282609
+best Test Steps: 26 auc 0.5825329697232623
+detail results[]
+
+[Round 26] fedavg_proto val_auc=0.6581, test_auc=0.5825, best_test=0.5825, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 27 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=27, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=27, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=27, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=27, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 27 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 27 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 27 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 27 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 27 Iter: 3 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 27 Iter: 4 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 27 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 56.36it/s]
+INFO:root:01/09/2026 07:40:19
+cur Val Steps: 27 auc 0.6590445535338711 std 0.09469210969224587
+cur Test Steps: 27 auc 0.5774479278886722 std 0.04299844871711818
+best Val Steps: 27 auc 0.6590445535338711
+best Test Steps: 27 auc 0.5774479278886722
+detail results[]
+
+[Round 27] fedavg_proto val_auc=0.6590, test_auc=0.5774, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 28 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=28, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=28, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=28, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=28, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 28 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 28 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 28 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 28 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 28 Iter: 3 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 28 Iter: 4 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 28 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 51.47it/s]
+INFO:root:01/09/2026 07:41:15
+cur Val Steps: 28 auc 0.6549541146470619 std 0.09216349108036805
+cur Test Steps: 28 auc 0.5785431146596319 std 0.044216833241634716
+best Val Steps: 28 auc 0.6590445535338711
+best Test Steps: 28 auc 0.5774479278886722
+detail results[]
+
+[Round 28] fedavg_proto val_auc=0.6550, test_auc=0.5785, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 29 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=29, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=29, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=29, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=29, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 29 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 29 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 29 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 29 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 29 Iter: 3 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 29 Iter: 4 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 29 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 42.03it/s]Round: 29 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 41.97it/s]
+INFO:root:01/09/2026 07:42:17
+cur Val Steps: 29 auc 0.6514271475722562 std 0.09532883998741844
+cur Test Steps: 29 auc 0.5722546336477792 std 0.045081491846068106
+best Val Steps: 29 auc 0.6590445535338711
+best Test Steps: 29 auc 0.5774479278886722
+detail results[]
+
+[Round 29] fedavg_proto val_auc=0.6514, test_auc=0.5723, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 30 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=30, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=30, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=30, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=30, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 30 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 30 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 30 Iter: 0 / 5:  20%|██        | 1/5 [00:00<00:00,  8.92it/s]Round: 30 Iter: 1 / 5:  20%|██        | 1/5 [00:00<00:00,  8.92it/s]Round: 30 Iter: 2 / 5:  20%|██        | 1/5 [00:00<00:00,  8.92it/s]Round: 30 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 11.91it/s]Round: 30 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 11.91it/s]Round: 30 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 11.91it/s]Round: 30 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 12.73it/s]Round: 30 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 12.27it/s]
+INFO:root:01/09/2026 07:43:17
+cur Val Steps: 30 auc 0.6511246151267387 std 0.09385221905615583
+cur Test Steps: 30 auc 0.5706516939310984 std 0.048878048763113364
+best Val Steps: 30 auc 0.6590445535338711
+best Test Steps: 30 auc 0.5774479278886722
+detail results[]
+
+[Round 30] fedavg_proto val_auc=0.6511, test_auc=0.5707, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 31 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=31, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=31, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=31, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=31, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 31 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 31 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 31 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 31 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 31 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 24.63it/s]Round: 31 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 24.63it/s]Round: 31 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 24.63it/s]Round: 31 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 27.75it/s]
+INFO:root:01/09/2026 07:44:17
+cur Val Steps: 31 auc 0.6477858679440096 std 0.09718375217507207
+cur Test Steps: 31 auc 0.5706657719898168 std 0.048778680996240414
+best Val Steps: 31 auc 0.6590445535338711
+best Test Steps: 31 auc 0.5774479278886722
+detail results[]
+
+[Round 31] fedavg_proto val_auc=0.6478, test_auc=0.5707, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 32 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=32, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=32, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=32, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=32, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 32 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 32 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 32 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 32 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 32 Iter: 3 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 32 Iter: 4 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 32 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 117.78it/s]
+INFO:root:01/09/2026 07:45:16
+cur Val Steps: 32 auc 0.6525013769165597 std 0.0936805032258536
+cur Test Steps: 32 auc 0.5726029197074525 std 0.04922167123188701
+best Val Steps: 32 auc 0.6590445535338711
+best Test Steps: 32 auc 0.5774479278886722
+detail results[]
+
+[Round 32] fedavg_proto val_auc=0.6525, test_auc=0.5726, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 33 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=33, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=33, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=33, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=33, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 33 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 33 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 33 Iter: 0 / 5:  20%|██        | 1/5 [00:00<00:00,  5.09it/s]Round: 33 Iter: 1 / 5:  20%|██        | 1/5 [00:00<00:00,  5.09it/s]Round: 33 Iter: 2 / 5:  20%|██        | 1/5 [00:00<00:00,  5.09it/s]Round: 33 Iter: 3 / 5:  20%|██        | 1/5 [00:00<00:00,  5.09it/s]Round: 33 Iter: 4 / 5:  20%|██        | 1/5 [00:00<00:00,  5.09it/s]Round: 33 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 18.20it/s]
+INFO:root:01/09/2026 07:46:17
+cur Val Steps: 33 auc 0.6510558994856731 std 0.09591927338414415
+cur Test Steps: 33 auc 0.5678908655154784 std 0.050916103750177515
+best Val Steps: 33 auc 0.6590445535338711
+best Test Steps: 33 auc 0.5774479278886722
+detail results[]
+
+[Round 33] fedavg_proto val_auc=0.6511, test_auc=0.5679, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 34 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=34, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=34, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=34, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=34, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 34 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 34 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 34 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 34 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 34 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 23.78it/s]Round: 34 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 23.78it/s]Round: 34 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 23.78it/s]Round: 34 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 33.06it/s]
+INFO:root:01/09/2026 07:47:15
+cur Val Steps: 34 auc 0.6477952706408411 std 0.10100517484069017
+cur Test Steps: 34 auc 0.5733322598627618 std 0.053103578571268045
+best Val Steps: 34 auc 0.6590445535338711
+best Test Steps: 34 auc 0.5774479278886722
+detail results[]
+
+[Round 34] fedavg_proto val_auc=0.6478, test_auc=0.5733, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 35 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=35, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=35, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=35, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=35, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 35 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 35 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 35 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 35 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 35 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 14.57it/s]Round: 35 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 14.57it/s]Round: 35 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 14.57it/s]Round: 35 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 18.74it/s]
+INFO:root:01/09/2026 07:48:16
+cur Val Steps: 35 auc 0.6453622350333007 std 0.09787268250343734
+cur Test Steps: 35 auc 0.5651784323759379 std 0.05280540152833017
+best Val Steps: 35 auc 0.6590445535338711
+best Test Steps: 35 auc 0.5774479278886722
+detail results[]
+
+[Round 35] fedavg_proto val_auc=0.6454, test_auc=0.5652, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 36 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=36, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=36, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=36, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=36, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 36 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 36 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 36 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 36 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 36 Iter: 3 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 36 Iter: 4 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 36 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 48.62it/s]Round: 36 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 48.56it/s]
+INFO:root:01/09/2026 07:49:14
+cur Val Steps: 36 auc 0.6433078096712328 std 0.09996516657455973
+cur Test Steps: 36 auc 0.5619349715272111 std 0.051749028513498684
+best Val Steps: 36 auc 0.6590445535338711
+best Test Steps: 36 auc 0.5774479278886722
+detail results[]
+
+[Round 36] fedavg_proto val_auc=0.6433, test_auc=0.5619, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 37 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=37, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=37, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=37, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=37, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 37 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 37 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 37 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 37 Iter: 1 / 5:  40%|████      | 2/5 [00:00<00:00, 19.54it/s]Round: 37 Iter: 2 / 5:  40%|████      | 2/5 [00:00<00:00, 19.54it/s]Round: 37 Iter: 3 / 5:  40%|████      | 2/5 [00:00<00:00, 19.54it/s]Round: 37 Iter: 4 / 5:  40%|████      | 2/5 [00:00<00:00, 19.54it/s]Round: 37 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 26.53it/s]
+INFO:root:01/09/2026 07:50:14
+cur Val Steps: 37 auc 0.6489250494837058 std 0.09930686732823746
+cur Test Steps: 37 auc 0.5675620306394376 std 0.05206983937970396
+best Val Steps: 37 auc 0.6590445535338711
+best Test Steps: 37 auc 0.5774479278886722
+detail results[]
+
+[Round 37] fedavg_proto val_auc=0.6489, test_auc=0.5676, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 38 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=38, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=38, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=38, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=38, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 38 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 38 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 38 Iter: 0 / 5:  20%|██        | 1/5 [00:00<00:00,  9.53it/s]Round: 38 Iter: 1 / 5:  20%|██        | 1/5 [00:00<00:00,  9.53it/s]Round: 38 Iter: 2 / 5:  20%|██        | 1/5 [00:00<00:00,  9.53it/s]Round: 38 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 13.98it/s]Round: 38 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 13.98it/s]Round: 38 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 13.98it/s]Round: 38 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 17.53it/s]
+INFO:root:01/09/2026 07:51:11
+cur Val Steps: 38 auc 0.6532681735518934 std 0.10135328623627907
+cur Test Steps: 38 auc 0.5689023836689877 std 0.05158083075736853
+best Val Steps: 38 auc 0.6590445535338711
+best Test Steps: 38 auc 0.5774479278886722
+detail results[]
+
+[Round 38] fedavg_proto val_auc=0.6533, test_auc=0.5689, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 39 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=39, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=39, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=39, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=39, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 39 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 39 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 39 Iter: 0 / 5:  20%|██        | 1/5 [00:00<00:00,  8.46it/s]Round: 39 Iter: 1 / 5:  20%|██        | 1/5 [00:00<00:00,  8.46it/s]Round: 39 Iter: 2 / 5:  20%|██        | 1/5 [00:00<00:00,  8.46it/s]Round: 39 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 13.22it/s]Round: 39 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 13.22it/s]Round: 39 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 13.22it/s]Round: 39 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 17.49it/s]
+INFO:root:01/09/2026 07:52:07
+cur Val Steps: 39 auc 0.6486406700144485 std 0.0943211574986102
+cur Test Steps: 39 auc 0.560896754445668 std 0.04667263673575898
+best Val Steps: 39 auc 0.6590445535338711
+best Test Steps: 39 auc 0.5774479278886722
+detail results[]
+
+[Round 39] fedavg_proto val_auc=0.6486, test_auc=0.5609, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 40 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=40, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=40, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=40, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=40, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 40 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 40 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 40 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 40 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 40 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 24.30it/s]Round: 40 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 24.30it/s]Round: 40 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 24.30it/s]Round: 40 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 25.30it/s]
+INFO:root:01/09/2026 07:53:09
+cur Val Steps: 40 auc 0.6560617747550005 std 0.09629855389055954
+cur Test Steps: 40 auc 0.5678912110597417 std 0.052059721559409466
+best Val Steps: 40 auc 0.6590445535338711
+best Test Steps: 40 auc 0.5774479278886722
+detail results[]
+
+[Round 40] fedavg_proto val_auc=0.6561, test_auc=0.5679, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 41 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=41, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=41, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=41, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=41, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 41 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 41 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 41 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 41 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 41 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 22.62it/s]Round: 41 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 22.62it/s]Round: 41 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 22.62it/s]Round: 41 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 24.66it/s]
+INFO:root:01/09/2026 07:54:11
+cur Val Steps: 41 auc 0.6515999330738547 std 0.09640988588070382
+cur Test Steps: 41 auc 0.5691498272754478 std 0.05132064122152227
+best Val Steps: 41 auc 0.6590445535338711
+best Test Steps: 41 auc 0.5774479278886722
+detail results[]
+
+[Round 41] fedavg_proto val_auc=0.6516, test_auc=0.5691, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 42 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=42, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=42, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=42, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=42, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 42 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 42 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 42 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 42 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 42 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 23.71it/s]Round: 42 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 23.71it/s]Round: 42 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 23.71it/s]Round: 42 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 27.05it/s]
+INFO:root:01/09/2026 07:55:09
+cur Val Steps: 42 auc 0.6514170767720704 std 0.09519165562914156
+cur Test Steps: 42 auc 0.5673219258578551 std 0.051055718910029364
+best Val Steps: 42 auc 0.6590445535338711
+best Test Steps: 42 auc 0.5774479278886722
+detail results[]
+
+[Round 42] fedavg_proto val_auc=0.6514, test_auc=0.5673, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 43 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=43, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=43, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=43, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=43, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 43 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 43 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 43 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 43 Iter: 1 / 5:  40%|████      | 2/5 [00:00<00:00, 14.29it/s]Round: 43 Iter: 2 / 5:  40%|████      | 2/5 [00:00<00:00, 14.29it/s]Round: 43 Iter: 3 / 5:  40%|████      | 2/5 [00:00<00:00, 14.29it/s]Round: 43 Iter: 4 / 5:  40%|████      | 2/5 [00:00<00:00, 14.29it/s]Round: 43 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 20.18it/s]Round: 43 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 19.22it/s]
+INFO:root:01/09/2026 07:56:11
+cur Val Steps: 43 auc 0.6505976098732041 std 0.09838995090519581
+cur Test Steps: 43 auc 0.5704792455458766 std 0.05083369828713064
+best Val Steps: 43 auc 0.6590445535338711
+best Test Steps: 43 auc 0.5774479278886722
+detail results[]
+
+[Round 43] fedavg_proto val_auc=0.6506, test_auc=0.5705, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 44 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=44, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=44, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=44, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=44, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 44 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 44 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 44 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 44 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 44 Iter: 3 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 44 Iter: 3 / 5:  80%|████████  | 4/5 [00:00<00:00, 38.29it/s]Round: 44 Iter: 4 / 5:  80%|████████  | 4/5 [00:00<00:00, 38.29it/s]Round: 44 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 43.18it/s]
+INFO:root:01/09/2026 07:57:10
+cur Val Steps: 44 auc 0.6483108477754661 std 0.10134774051768095
+cur Test Steps: 44 auc 0.5678221106972794 std 0.05206054457133361
+best Val Steps: 44 auc 0.6590445535338711
+best Test Steps: 44 auc 0.5774479278886722
+detail results[]
+
+[Round 44] fedavg_proto val_auc=0.6483, test_auc=0.5678, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 45 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=45, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=45, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=45, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=45, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 45 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 45 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 45 Iter: 0 / 5:  20%|██        | 1/5 [00:00<00:00,  8.48it/s]Round: 45 Iter: 1 / 5:  20%|██        | 1/5 [00:00<00:00,  8.48it/s]Round: 45 Iter: 2 / 5:  20%|██        | 1/5 [00:00<00:00,  8.48it/s]Round: 45 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 14.74it/s]Round: 45 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 14.74it/s]Round: 45 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 14.74it/s]Round: 45 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 19.48it/s]
+INFO:root:01/09/2026 07:58:07
+cur Val Steps: 45 auc 0.6565975102340794 std 0.10097856308875264
+cur Test Steps: 45 auc 0.5701446419701551 std 0.05247457295880898
+best Val Steps: 45 auc 0.6590445535338711
+best Test Steps: 45 auc 0.5774479278886722
+detail results[]
+
+[Round 45] fedavg_proto val_auc=0.6566, test_auc=0.5701, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 46 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=46, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=46, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=46, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=46, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 46 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 46 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 46 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 46 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 46 Iter: 3 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 46 Iter: 4 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 46 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 75.24it/s]
+INFO:root:01/09/2026 07:59:08
+cur Val Steps: 46 auc 0.6580300102677091 std 0.10138463736075158
+cur Test Steps: 46 auc 0.5720873109235154 std 0.053090126245799306
+best Val Steps: 46 auc 0.6590445535338711
+best Test Steps: 46 auc 0.5774479278886722
+detail results[]
+
+[Round 46] fedavg_proto val_auc=0.6580, test_auc=0.5721, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 47 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=47, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=47, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=47, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=47, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 47 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 47 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 47 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 47 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 47 Iter: 2 / 5:  60%|██████    | 3/5 [00:00<00:00, 28.16it/s]Round: 47 Iter: 3 / 5:  60%|██████    | 3/5 [00:00<00:00, 28.16it/s]Round: 47 Iter: 4 / 5:  60%|██████    | 3/5 [00:00<00:00, 28.16it/s]Round: 47 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 32.56it/s]
+INFO:root:01/09/2026 08:00:11
+cur Val Steps: 47 auc 0.6587453984027144 std 0.10403096496844311
+cur Test Steps: 47 auc 0.5725249786169948 std 0.05441957981453936
+best Val Steps: 47 auc 0.6590445535338711
+best Test Steps: 47 auc 0.5774479278886722
+detail results[]
+
+[Round 47] fedavg_proto val_auc=0.6587, test_auc=0.5725, best_test=0.5774, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 48 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=48, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=48, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=48, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=48, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 48 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 48 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 48 Iter: 1 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 48 Iter: 2 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 48 Iter: 3 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 48 Iter: 3 / 5:  80%|████████  | 4/5 [00:00<00:00, 38.28it/s]Round: 48 Iter: 4 / 5:  80%|████████  | 4/5 [00:00<00:00, 38.28it/s]Round: 48 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 42.34it/s]
+INFO:root:01/09/2026 08:01:07
+cur Val Steps: 48 auc 0.6601487390330497 std 0.10322697775024532
+cur Test Steps: 48 auc 0.5733385690523424 std 0.05249958694597363
+best Val Steps: 48 auc 0.6601487390330497
+best Test Steps: 48 auc 0.5733385690523424
+detail results[]
+
+[Round 48] fedavg_proto val_auc=0.6601, test_auc=0.5733, best_test=0.5733, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+INFO:root:########## fedavg_proto Communication round : 49 ##########
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:client_indexes = [0, 1, 2, 3]
+INFO:root:[Client 0] TopoFedProto train finished: round=49, use_proto=True, lambda=0.1000
+INFO:root:[Client 0] Collected 32/32 local topology prototypes from 234 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 1] TopoFedProto train finished: round=49, use_proto=True, lambda=0.1000
+INFO:root:[Client 1] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 2] TopoFedProto train finished: round=49, use_proto=True, lambda=0.1000
+INFO:root:[Client 2] Collected 32/32 local topology prototypes from 287 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:[Client 3] TopoFedProto train finished: round=49, use_proto=True, lambda=0.1000
+INFO:root:[Client 3] Collected 32/32 local topology prototypes from 333 samples (descriptor=fingerprint, cache_hit=True)
+INFO:root:Server descriptor clustering: requested=32, uploaded=128, cache_hit=True
+INFO:root:Round 49 aggregated 32 global topology prototypes
+  0%|          | 0/5 [00:00<?, ?it/s]Round: 49 Iter: 0 / 5:   0%|          | 0/5 [00:00<?, ?it/s]Round: 49 Iter: 0 / 5:  20%|██        | 1/5 [00:00<00:00,  9.46it/s]Round: 49 Iter: 1 / 5:  20%|██        | 1/5 [00:00<00:00,  9.46it/s]Round: 49 Iter: 2 / 5:  20%|██        | 1/5 [00:00<00:00,  9.46it/s]Round: 49 Iter: 3 / 5:  20%|██        | 1/5 [00:00<00:00,  9.46it/s]Round: 49 Iter: 3 / 5:  80%|████████  | 4/5 [00:00<00:00, 18.49it/s]Round: 49 Iter: 4 / 5:  80%|████████  | 4/5 [00:00<00:00, 18.49it/s]Round: 49 Iter: 4 / 5: 100%|██████████| 5/5 [00:00<00:00, 18.47it/s]
+INFO:root:01/09/2026 08:02:02
+cur Val Steps: 49 auc 0.6531566542351754 std 0.10461944102835084
+cur Test Steps: 49 auc 0.5714933455510395 std 0.054552373176558956
+best Val Steps: 49 auc 0.6601487390330497
+best Test Steps: 49 auc 0.5733385690523424
+detail results[]
+
+[Round 49] fedavg_proto val_auc=0.6532, test_auc=0.5715, best_test=0.5733, csv=DEPLOYMENT_HOME/work/FLMMP/fedchem_hiv_proto_20260624/TEST_review_fair_v3_20260901/results/reviewer_revision_fair_v3/priority_suite/k_occupancy/k_occupancy_SIDER_a0p5_hetero_seed1_fedavg_proto_mpnn_fingerprint_k32/fedavg_proto_SIDER_alpha0.5_seed1_split1_part1_encmpnn_descfingerprint_20260901_071158.csv
+[2026-09-01T08:02:04+09:00] END index=49 status=complete

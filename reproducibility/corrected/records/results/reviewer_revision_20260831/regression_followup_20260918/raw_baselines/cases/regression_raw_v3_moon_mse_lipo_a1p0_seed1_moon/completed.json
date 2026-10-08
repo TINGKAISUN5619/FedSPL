@@ -1,0 +1,24 @@
+{
+  "case": {
+    "alpha": 1.0,
+    "case_id": "regression_raw_v3_moon_mse_lipo_a1p0_seed1_moon",
+    "case_index": 16,
+    "dataset": "lipo",
+    "descriptor": "",
+    "encoder": "mpnn",
+    "k": 0,
+    "lambda_proto": 0.1,
+    "local_steps": 200,
+    "method": "moon",
+    "partition": "hetero",
+    "rounds": 50,
+    "seed": 1,
+    "suite": "regression_raw_v3_moon_mse"
+  },
+  "curve_sha256": "2d4a5bd063cf689ba22d9a17513d7c3bf4172b67de0d5e67f401a328b6646b0c",
+  "exit_code": 0,
+  "formal": true,
+  "lock_sha256": "f0e8062da041ff95c5aaf199b357b5255502c1414f5e0d720eb436a96fa1d7e9",
+  "log_sha256": "46c2670d357455d96250aeaa5121ca96426ecee67aeb52b20cb9bbaf85bb7efc",
+  "shared_authorization_sha256": "565dddb289f6ea5eee1a3c8f105be5bfdfd4e49117f7d04ff6da63f3aeb8472d"
+}

@@ -1,0 +1,7 @@
+{
+  "status": "complete",
+  "split_audits": 15,
+  "allocation_audits": 45,
+  "permutations": 45000,
+  "source_script_sha256": "4e5f5ab40f330194acad7ccea80595e8b8b8ef93f0678f7fece98db8bc1031ec"
+}

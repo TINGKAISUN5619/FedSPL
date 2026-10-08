@@ -1,0 +1,22 @@
+{
+  "blocks": 50,
+  "case": {
+    "alpha": 0.5,
+    "case_id": "HIV_alpha0.5_seed0_individual",
+    "dataset": "HIV",
+    "seed": 0
+  },
+  "files": {
+    "client_models.pt": "91575000740dd9ae315b5a00ca5ea6fcdf28bf270ac3399c6d872ae9d5233772",
+    "final_predictions.npz": "0606fb5a8c5b846ed456e43c0f8776831a9776fcf3206a88cdc61b43dd9dee93",
+    "metric_curves.csv": "dcfe7f405f8ca986fa0c2ec0c56f5394d5f570747d8e59e33d8fa9c95f6c1f90",
+    "spec.json": "720c2c4121ad5867101d588509469395f757515507a4c4dee10271723e229d8e",
+    "split_audit.json": "81e98795bb16557e960d1a2930238068f3485b8bf2525d2845d1da6cae6fe76b",
+    "training_trace.csv": "8be8159679b41bc49d5b488366fd8d1a100858caf20bb904ae92b50c76205495",
+    "validation_selection.json": "19c01e6e9d93be9c230b48242629612aeda32d8888153e17fa851136f260a61d"
+  },
+  "formal": true,
+  "protocol": "mpnn_individual_reviewer_v3_20260922_v1",
+  "seconds": 4706.117896579206,
+  "steps": 200
+}

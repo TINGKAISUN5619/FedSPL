@@ -1,0 +1,9 @@
+{
+  "client": 0,
+  "seed": 7921,
+  "reassigned_molecule_fraction": 0.9993084370677732,
+  "descriptor_multiset_preserved": true,
+  "cluster_counts_preserved": true,
+  "fixed_training_only_mapping": true,
+  "mapping_sha256": "532fc50e0fc226585f0786495ece85e9c4eb2bdd3cbff990c38f11a15a8f6277"
+}

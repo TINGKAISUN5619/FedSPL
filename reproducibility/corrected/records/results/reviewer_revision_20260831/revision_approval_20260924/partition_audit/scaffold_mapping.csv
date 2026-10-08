@@ -1,0 +1,6 @@
+dataset,stored_groups,computed_murcko_groups,stored_groups_with_multiple_murcko,murcko_groups_with_multiple_stored,empty_murcko_rows,parse_failures
+BBBP,1025,1025,0,0,99,0
+SIDER,824,824,0,0,154,0
+Tox21,2326,2326,0,0,1781,0
+HIV,19089,19089,0,0,1582,0
+ToxCast,2509,2426,0,72,1956,0

@@ -1,0 +1,11 @@
+dataset,method,alpha,seed,round,local_steps,local_k,global_k,lambda_proto,model_scope,audit_policy,auc,eligible_for_performance_claim
+SIDER,fedavg_proto,0.5,0,49,200,16,16,0.1,server,heldout_val_plus_test_NOT_primary,0.5775460367045941,False
+SIDER,fedavg_proto,0.5,0,49,200,16,16,0.1,server,missing_labels_as_zero_INVALID,0.5917850446545069,False
+SIDER,fedavg_proto,0.5,0,49,200,16,16,0.1,client_0,heldout_val_plus_test_NOT_primary,0.5706143198296638,False
+SIDER,fedavg_proto,0.5,0,49,200,16,16,0.1,client_0,missing_labels_as_zero_INVALID,0.5910185282257275,False
+SIDER,fedavg_proto,0.5,0,49,200,16,16,0.1,client_1,heldout_val_plus_test_NOT_primary,0.5640165363247258,False
+SIDER,fedavg_proto,0.5,0,49,200,16,16,0.1,client_1,missing_labels_as_zero_INVALID,0.5672794661828653,False
+SIDER,fedavg_proto,0.5,0,49,200,16,16,0.1,client_2,heldout_val_plus_test_NOT_primary,0.5510671724391157,False
+SIDER,fedavg_proto,0.5,0,49,200,16,16,0.1,client_2,missing_labels_as_zero_INVALID,0.5476348113631593,False
+SIDER,fedavg_proto,0.5,0,49,200,16,16,0.1,client_3,heldout_val_plus_test_NOT_primary,0.6118136653964236,False
+SIDER,fedavg_proto,0.5,0,49,200,16,16,0.1,client_3,missing_labels_as_zero_INVALID,0.6393434298463213,False

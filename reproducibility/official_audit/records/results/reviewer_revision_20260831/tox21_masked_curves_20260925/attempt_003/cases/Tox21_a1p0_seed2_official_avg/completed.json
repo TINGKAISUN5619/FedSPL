@@ -1,0 +1,26 @@
+{
+  "approval_sha256": "779cf19b429e46408b51f2bb697ca56cca7761b0174a090643e7b6e58e075aff",
+  "case": {
+    "alpha": 1.0,
+    "case_id": "Tox21_a1p0_seed2_official_avg",
+    "clients": 4,
+    "dataset": "Tox21",
+    "rounds": 50,
+    "seed": 2,
+    "steps": 200
+  },
+  "exit_code": 0,
+  "formal": true,
+  "output_sha256": {
+    "cross_run_differences.csv": "168b6ed71339b46805b19aba9af02269122e6e843da3908f1dad4895484ee1d3",
+    "final_model.pt": "5943c018dece526f29d5567f4ae9e756b73f299905856fe59a19d54da7660975",
+    "final_predictions.npz": "071ae484e0f263ee77eb596e4674357e2795e11cda77474ea8bc3fd335b6aa18",
+    "final_rescore.json": "9d862ceb240c999f1bf15f11bdfa847ab56924dfa733968b6fc91f6584c2a0d4",
+    "masked_rounds.csv": "76246bd8465d30a467f90dbf898389b2d8fc300652ed24fbcbd6bf52b0ce4e49",
+    "partition_audit.json": "eb18a1f526d9a69f5d9f4a910709a5e3b0d9f5e2a6749916a2c3f9218df71518",
+    "per_task_rounds.csv": "ffb95e1dd6c4510ce3eb81237cc217d3749130a5cb21c7cdc9cf6a058dfbcc77",
+    "rounds.csv": "43f0859064d06702973cfd4902c6f2f4798691450687d214736b7eebdb966d0b",
+    "run.log": "a8e8c2fad4634c868f52e2cd61cf727a1e3e99ef33350b51f3e9bb1d2ab07568",
+    "run_spec.json": "0a5c771dc468550c4e5c685d29806ecf3d3e68f60492b9aac7364cf65cf7f2be"
+  }
+}

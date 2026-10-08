@@ -1,0 +1,24 @@
+{
+  "case": {
+    "alpha": 0.5,
+    "case_id": "regression_raw_v3_moon_mse_freesolv_a0p5_seed2_moon",
+    "case_index": 23,
+    "dataset": "freesolv",
+    "descriptor": "",
+    "encoder": "mpnn",
+    "k": 0,
+    "lambda_proto": 0.1,
+    "local_steps": 200,
+    "method": "moon",
+    "partition": "hetero",
+    "rounds": 50,
+    "seed": 2,
+    "suite": "regression_raw_v3_moon_mse"
+  },
+  "curve_sha256": "05a3d0a2797b79520f3b1127261ea64905a1e13ee5cf8da2d647af0ab8b991c7",
+  "exit_code": 0,
+  "formal": true,
+  "lock_sha256": "f0e8062da041ff95c5aaf199b357b5255502c1414f5e0d720eb436a96fa1d7e9",
+  "log_sha256": "962aa51ad245b87b31a872ab32fa41ddf410d2eac638921a1ebc16fddffb6bf1",
+  "shared_authorization_sha256": "565dddb289f6ea5eee1a3c8f105be5bfdfd4e49117f7d04ff6da63f3aeb8472d"
+}

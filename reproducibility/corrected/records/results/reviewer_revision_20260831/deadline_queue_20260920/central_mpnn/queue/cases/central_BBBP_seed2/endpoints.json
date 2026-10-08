@@ -1,0 +1,38 @@
+[
+  {
+    "auc": 0.8350888742593813,
+    "block": 49,
+    "checkpoint": "final",
+    "checkpoint_sha256": "4c195293b8f52eb75460dcc167ceed24bbd55e20798b424088ef7294b05f754c",
+    "split": "val",
+    "val_reinference_minus_curve": 0.0,
+    "valid_tasks": 1
+  },
+  {
+    "auc": 0.8807809640024407,
+    "block": 49,
+    "checkpoint": "final",
+    "checkpoint_sha256": "4c195293b8f52eb75460dcc167ceed24bbd55e20798b424088ef7294b05f754c",
+    "split": "test",
+    "val_reinference_minus_curve": null,
+    "valid_tasks": 1
+  },
+  {
+    "auc": 0.943778801843318,
+    "block": 4,
+    "checkpoint": "val_selected",
+    "checkpoint_sha256": "c926b7a4f9377491f46189ed3e36ac709e6b04bffd7357f7945b3037964b6497",
+    "split": "val",
+    "val_reinference_minus_curve": 0.0,
+    "valid_tasks": 1
+  },
+  {
+    "auc": 0.9071384990848077,
+    "block": 4,
+    "checkpoint": "val_selected",
+    "checkpoint_sha256": "c926b7a4f9377491f46189ed3e36ac709e6b04bffd7357f7945b3037964b6497",
+    "split": "test",
+    "val_reinference_minus_curve": null,
+    "valid_tasks": 1
+  }
+]

@@ -1,0 +1,11 @@
+dataset,method,alpha,seed,round,local_steps,local_k,global_k,lambda_proto,model_scope,audit_policy,auc,eligible_for_performance_claim
+Tox21,avg,0.5,0,49,200,16,16,0.0,server,heldout_val_plus_test_NOT_primary,0.793542537327058,False
+Tox21,avg,0.5,0,49,200,16,16,0.0,server,missing_labels_as_zero_INVALID,0.763711194428036,False
+Tox21,avg,0.5,0,49,200,16,16,0.0,client_0,heldout_val_plus_test_NOT_primary,0.7884079996213235,False
+Tox21,avg,0.5,0,49,200,16,16,0.0,client_0,missing_labels_as_zero_INVALID,0.7593555286617234,False
+Tox21,avg,0.5,0,49,200,16,16,0.0,client_1,heldout_val_plus_test_NOT_primary,0.7878544298056162,False
+Tox21,avg,0.5,0,49,200,16,16,0.0,client_1,missing_labels_as_zero_INVALID,0.7613321636100056,False
+Tox21,avg,0.5,0,49,200,16,16,0.0,client_2,heldout_val_plus_test_NOT_primary,0.7889326263807078,False
+Tox21,avg,0.5,0,49,200,16,16,0.0,client_2,missing_labels_as_zero_INVALID,0.7556614125829281,False
+Tox21,avg,0.5,0,49,200,16,16,0.0,client_3,heldout_val_plus_test_NOT_primary,0.7808636775531882,False
+Tox21,avg,0.5,0,49,200,16,16,0.0,client_3,missing_labels_as_zero_INVALID,0.7457954157642345,False

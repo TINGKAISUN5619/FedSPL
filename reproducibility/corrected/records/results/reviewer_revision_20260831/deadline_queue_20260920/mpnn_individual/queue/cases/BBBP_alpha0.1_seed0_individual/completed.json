@@ -1,0 +1,22 @@
+{
+  "blocks": 50,
+  "case": {
+    "alpha": 0.1,
+    "case_id": "BBBP_alpha0.1_seed0_individual",
+    "dataset": "BBBP",
+    "seed": 0
+  },
+  "files": {
+    "client_models.pt": "3949ef106feadcee1b6b7acb994d7dbf505157ee1278864c88d24eaf9757349f",
+    "final_predictions.npz": "972361c4d2fe4b66826028b4025f4acea0e2c1c6b5670fc5d39250af810a9e23",
+    "metric_curves.csv": "2faaaa22545c6f4f5712a68ce3f53eaecfd281df4f56007efb10275a75b30154",
+    "spec.json": "fc23fb9b6f9df244c74ec4084f5c4b3ee1639be57b5dcfbabc8b4efcc2ce1085",
+    "split_audit.json": "b2095b892f619a0e9df42ca063babb4bf5838e7c8b6b663303876269723ad82b",
+    "training_trace.csv": "8d5d282a0067e22e32ccef482a975ab464115b7922ed53cc112d8d658e1e3962",
+    "validation_selection.json": "a4697417111864ea65d8899572efa812b8e4bec14d0c08716f65c8fa5f9fc49b"
+  },
+  "formal": true,
+  "protocol": "mpnn_individual_reviewer_v3_20260922_v1",
+  "seconds": 3894.959635004401,
+  "steps": 200
+}

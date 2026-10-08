@@ -1,0 +1,23 @@
+{
+  "blocks": 50,
+  "case_id": "central_ToxCast_seed2",
+  "files": {
+    "block_curve.csv": "206044040f2055f38c685540ef071893a275ea6451d95e1f1fe8cae32c3ee3d6",
+    "endpoints.json": "076ee63df4112b5ae23307de6dc88b42493112c63ff3acf3ea086ba57e5a2506",
+    "events.json": "d770cbd703ce49802de248e4793a6c115de5d3ae1d7801a7ecc2d594f593bc99",
+    "final.pt": "0fa81fb790a5b58dca285fb68b396b17171a43a85323590b0fd4a3e4eb2b8f5f",
+    "final_test_predictions.npz": "ac020660f8074b10b08ac3cd179a8ce423af524bc4891bdf78862902b1880aaf",
+    "final_val_predictions.npz": "e178bb62db9456ceebfc2b09c41d2c71c84753154b70d90fad5e3849d89cfa55",
+    "selection.json": "9d3f525017afbe7704275e533ccec86e50e1cd6544c7d160c5fa4a46ddc0c153",
+    "spec.json": "54c05067cbd8163ad09b63a3dfc5a788d94fcb7834908d9d68e95cef654d1d60",
+    "split_ids.json": "8f3586086dc33ee7485e5cf387c24fec285f009601c7994efa774e2f06898e91",
+    "val_selected.pt": "ea49ab8c7193f1b5e441c14fc1acfecb133ad280ac5292750dad84847565d132",
+    "val_selected_test_predictions.npz": "ac020660f8074b10b08ac3cd179a8ce423af524bc4891bdf78862902b1880aaf",
+    "val_selected_val_predictions.npz": "e178bb62db9456ceebfc2b09c41d2c71c84753154b70d90fad5e3849d89cfa55"
+  },
+  "formal": true,
+  "manifest_sha256": "0fd8d723a9490d2654ac5bd8cb14b058002b850df51d22a6a6a79eda0096c0e5",
+  "protocol": "central_mpnn_reviewer_v3_50x800_v1",
+  "status": "complete",
+  "successful_updates": 40000
+}

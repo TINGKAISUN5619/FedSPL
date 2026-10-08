@@ -1,0 +1,22 @@
+{
+  "blocks": 50,
+  "case": {
+    "alpha": 0.1,
+    "case_id": "ToxCast_alpha0.1_seed0_individual",
+    "dataset": "ToxCast",
+    "seed": 0
+  },
+  "files": {
+    "client_models.pt": "b3835e848bee48c1cfdcd15baa81900ff4a88806464e48ffaea3b66aaa9d2e91",
+    "final_predictions.npz": "b04631e32ca4eb7c0aa9c5975e7baa4c9aef72fcfd626cc04041f0a6a46a53a6",
+    "metric_curves.csv": "b0d41afb2094fe70587f1d2df21f9f6e8cb0137768c6c0e4d448ecf4a49c02c3",
+    "spec.json": "8fc6ecc596d3f7bd569c55829afb6d3139d3d03018d22f08e16f05b6d5d90446",
+    "split_audit.json": "c17d0a44f8b333367de83d49952f8d4d5b4f7b48175246c12f70360ba0dd71e6",
+    "training_trace.csv": "84abe3f5e150c82b2133eeb6ba2f7b979d5b9fb44da13f30a68c8d3ff67a5731",
+    "validation_selection.json": "ca6d1a161c20be60bcd8bf76019349d825f274fc272970eeddf39b6bf22b425a"
+  },
+  "formal": true,
+  "protocol": "mpnn_individual_reviewer_v3_20260922_v1",
+  "seconds": 5197.261736050248,
+  "steps": 200
+}

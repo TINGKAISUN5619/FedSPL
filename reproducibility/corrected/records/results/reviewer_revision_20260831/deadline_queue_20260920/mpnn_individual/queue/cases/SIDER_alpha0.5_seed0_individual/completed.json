@@ -1,0 +1,22 @@
+{
+  "blocks": 50,
+  "case": {
+    "alpha": 0.5,
+    "case_id": "SIDER_alpha0.5_seed0_individual",
+    "dataset": "SIDER",
+    "seed": 0
+  },
+  "files": {
+    "client_models.pt": "8e524d6d53c39555a929af065eef4a16934c912110f3553bd246881d27ef2d13",
+    "final_predictions.npz": "3a10d1b3bb0c30d3ba1b7b5e5ef478159cacdf3e7702d8a9c5c1af8d263dccab",
+    "metric_curves.csv": "579e49e5858cb2d8577ba12ab729e072046a8631209cbe96171e8a64d97a0c31",
+    "spec.json": "edbb1479e03edf0e87c1d80c4d074f1d0b4ffe3dfc2d9d48eee4a9de62eb170a",
+    "split_audit.json": "e305eff170d8e6437f7d5ddadfbab7fb04640150339c1083a94ad15fd7055f78",
+    "training_trace.csv": "99a183752b61b6af4f67ce63d7d22a7ff2e919894c4dbe60bdede27cf4dbbd70",
+    "validation_selection.json": "8058bcb45a539cbee8425e12233fa943d99189a30db57be7b9d55a5074dc04c8"
+  },
+  "formal": true,
+  "protocol": "mpnn_individual_reviewer_v3_20260922_v1",
+  "seconds": 3472.563673850149,
+  "steps": 200
+}

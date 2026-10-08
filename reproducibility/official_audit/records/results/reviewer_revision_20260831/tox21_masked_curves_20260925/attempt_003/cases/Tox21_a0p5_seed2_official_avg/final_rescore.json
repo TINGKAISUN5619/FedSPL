@@ -1,0 +1,6 @@
+{
+  "final_masked_test_auc": 0.795514980869167,
+  "final_masked_val_auc": 0.787820464982492,
+  "final_unmasked_rescore_test_auc": 0.7783182170459425,
+  "final_unmasked_rescore_val_auc": 0.7700154975629515
+}

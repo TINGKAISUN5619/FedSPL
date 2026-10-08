@@ -1,0 +1,22 @@
+{
+  "case": {
+    "alpha": 0.5,
+    "case_id": "BBBP_seed2_avg",
+    "dataset": "BBBP",
+    "global_k": 16,
+    "lambda_proto": 0.0,
+    "local_k": 16,
+    "method": "avg",
+    "peak_lr": 0.0003,
+    "priority": 2,
+    "role": "avg",
+    "rounds": 50,
+    "seed": 2,
+    "stage": "confirmation",
+    "steps": 200
+  },
+  "completed": true,
+  "formal": true,
+  "micro": false,
+  "protocol": "mmgnn-raw-logit-v2-20260918"
+}

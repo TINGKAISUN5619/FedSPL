@@ -1,0 +1,7 @@
+{
+  "independent_state_continuation": true,
+  "model_aggregation_calls": 0,
+  "paired_batches_checked": true,
+  "prototype_exchange_calls": 0,
+  "same_partition_as_fedavg": true
+}

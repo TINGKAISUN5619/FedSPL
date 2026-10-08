@@ -1,0 +1,16 @@
+dataset,alpha,local_best_method,local_best_mean_auc,highest_federated_method,highest_federated_mean_auc,fedspl_mean_auc,best_federated_minus_best_local_pp,fedspl_minus_best_local_pp,interpretation
+BBBP,0.1,LOCAL-ECFP-RF,0.8526160693488253,moon,0.881465631283089,0.8405589037575812,2.884956193426369,-1.2057165591244035,descriptive_server_vs_client_mean; not matched-model causal effect
+BBBP,0.5,LOCAL-ECFP-NB,0.8550723109464448,oursvatFLITPLUS,0.8907857506824608,0.8260091163850503,3.571343973601604,-2.90631945613945,descriptive_server_vs_client_mean; not matched-model causal effect
+BBBP,1.0,LOCAL-ECFP-RF,0.8671373532122999,moon,0.8863037570623458,0.8627231145428413,1.9166403850045866,-0.4414238669458559,descriptive_server_vs_client_mean; not matched-model causal effect
+SIDER,0.1,LOCAL-ECFP-RF,0.5991601995113867,fpl,0.6134770976841017,0.6096045679113431,1.4316898172715087,1.0444368399956439,descriptive_server_vs_client_mean; not matched-model causal effect
+SIDER,0.5,LOCAL-ECFP-RF,0.6140571264796054,fedavg_proto,0.612509959214089,0.612509959214089,-0.15471672655164026,-0.15471672655164026,descriptive_server_vs_client_mean; not matched-model causal effect
+SIDER,1.0,LOCAL-ECFP-RF,0.6101720914366736,fedproto,0.601981667429527,0.591889415495677,-0.8190424007146646,-1.828267594099664,descriptive_server_vs_client_mean; not matched-model causal effect
+Tox21,0.1,LOCAL-ECFP-RF,0.7375442346448474,fedprox,0.7944157402315359,0.7850289924309787,5.687150558668852,4.748475778613126,descriptive_server_vs_client_mean; not matched-model causal effect
+Tox21,0.5,LOCAL-ECFP-RF,0.7509431581720035,avg,0.8052579469158392,0.798846870889219,5.431478874383567,4.79037127172155,descriptive_server_vs_client_mean; not matched-model causal effect
+Tox21,1.0,LOCAL-ECFP-RF,0.7632175285997375,avg,0.8029822211139785,0.7933778097025506,3.9764692514241085,3.0160281102813102,descriptive_server_vs_client_mean; not matched-model causal effect
+HIV,0.1,LOCAL-ECFP-RF,0.7680442301996128,avg,0.7561758864134976,0.7435472033920614,-1.186834378611512,-2.449702680755139,descriptive_server_vs_client_mean; not matched-model causal effect
+HIV,0.5,LOCAL-ECFP-RF,0.7731316098009784,avg,0.7555186993210203,0.7531429930626509,-1.7612910479958055,-1.9988616738327525,descriptive_server_vs_client_mean; not matched-model causal effect
+HIV,1.0,LOCAL-ECFP-RF,0.7740543080899953,avg,0.7635508158633126,0.7535527100829494,-1.0503492226682676,-2.0501598007045874,descriptive_server_vs_client_mean; not matched-model causal effect
+ToxCast,0.1,LOCAL-ECFP-NB,0.6196806519433924,fedproto,0.6793523805393896,0.6709275491785336,5.967172859599723,5.12468972351412,descriptive_server_vs_client_mean; not matched-model causal effect
+ToxCast,0.5,LOCAL-ECFP-NB,0.6239515079656788,fedproto,0.6754959759489026,0.6747983206853241,5.154446798322388,5.084681271964531,descriptive_server_vs_client_mean; not matched-model causal effect
+ToxCast,1.0,LOCAL-ECFP-RF,0.6328897411366804,fedavg_proto,0.6820974667539627,0.6820974667539627,4.920772561728226,4.920772561728226,descriptive_server_vs_client_mean; not matched-model causal effect

@@ -1,0 +1,21 @@
+{
+  "dataset": "Tox21",
+  "alpha": 0.5,
+  "seed": 0,
+  "comm_round": 50,
+  "clients_per_round": 4,
+  "local_steps_per_round": 200,
+  "primary_split": "heldout_test_alias_val_split",
+  "client_source_split": "train_client_split",
+  "cluster_source": "Morgan fingerprint KMeans, k=16",
+  "checkpoint_status_by_method": {
+    "FedProto": "trained"
+  },
+  "selected_methods": [
+    "FedProto"
+  ],
+  "metrics_csv": "TEST/results/embedding_mechanism_tox21_alpha0p5_seed0_fedproto/embedding_metrics.csv",
+  "metadata_csv": "TEST/results/embedding_mechanism_tox21_alpha0p5_seed0_fedproto/embedding_metadata.csv",
+  "log_path": "TEST/results/embedding_mechanism_tox21_alpha0p5_seed0_fedproto/logs/embedding_mechanism_20260707_184659.log",
+  "figure_base": "TEST/results/embedding_mechanism_tox21_alpha0p5_seed0_fedproto/figures/tox21_alpha0p5_embedding_mechanism_tsne"
+}

@@ -1,0 +1,16 @@
+dataset,alpha,spl_rank,methods,spl_mean_auc,avg_mean_auc,spl_minus_avg_pp,descending_unrounded_mean_order,best_methods,second_methods,tie_note
+BBBP,0.1,8,8,0.8405589037575812,0.8422817121833445,-0.17228084257632226,MOON > FLIT+ > Prox > Proto > FPL > TGP > Avg > SPL,MOON,FLIT+,Exact equal means share a dense rank; order within ties follows table order
+BBBP,0.5,8,8,0.8260091163850503,0.8554661842480316,-2.94570678629813,FLIT+ > MOON > TGP > Proto > Avg > FPL > Prox > SPL,FLIT+,MOON,Exact equal means share a dense rank; order within ties follows table order
+BBBP,1.0,5,8,0.8627231145428413,0.8539085128057236,0.8814601737117789,MOON > FLIT+ > FPL > TGP > SPL > Prox > Proto > Avg,MOON,FLIT+,Exact equal means share a dense rank; order within ties follows table order
+SIDER,0.1,2,8,0.6096045679113431,0.5464702146746309,6.313435323671223,FPL > SPL > Proto > TGP > MOON > Prox > FLIT+ > Avg,FPL,SPL,Exact equal means share a dense rank; order within ties follows table order
+SIDER,0.5,1,8,0.612509959214089,0.5720357794874243,4.047417972666468,SPL > MOON > FLIT+ > Prox > TGP > Proto > FPL > Avg,SPL,MOON,Exact equal means share a dense rank; order within ties follows table order
+SIDER,1.0,2,8,0.591889415495677,0.5474130987194082,4.447631677626873,Proto > SPL > FPL > Prox > FLIT+ > TGP > MOON > Avg,Proto,SPL,Exact equal means share a dense rank; order within ties follows table order
+Tox21,0.1,3,8,0.7850289924309787,0.782317875124064,0.27111173069146455,Prox > FPL > SPL > Avg > Proto > FLIT+ > MOON > TGP,Prox,FPL,Exact equal means share a dense rank; order within ties follows table order
+Tox21,0.5,2,8,0.798846870889219,0.8052579469158392,-0.6411076026620166,Avg > SPL > Proto > FPL > TGP > FLIT+ > MOON > Prox,Avg,SPL,Exact equal means share a dense rank; order within ties follows table order
+Tox21,1.0,3,8,0.7933778097025506,0.8029822211139785,-0.9604411411427982,Avg > FPL > SPL > Proto > TGP > FLIT+ > Prox > MOON,Avg,FPL,Exact equal means share a dense rank; order within ties follows table order
+HIV,0.1,5,8,0.7435472033920614,0.7561758864134976,-1.262868302143627,Avg > FLIT+ > FPL > Proto > SPL > Prox > TGP > MOON,Avg,FLIT+,Exact equal means share a dense rank; order within ties follows table order
+HIV,0.5,2,8,0.7531429930626509,0.7555186993210203,-0.237570625836947,Avg > SPL > FLIT+ > Prox > Proto > FPL > TGP > MOON,Avg,SPL,Exact equal means share a dense rank; order within ties follows table order
+HIV,1.0,2,8,0.7535527100829494,0.7635508158633126,-0.9998105780363198,Avg > SPL > FLIT+ > FPL > Proto > Prox > MOON > TGP,Avg,SPL,Exact equal means share a dense rank; order within ties follows table order
+ToxCast,0.1,4,8,0.6709275491785336,0.671264942677405,-0.03373934988714078,Proto > TGP > Avg > SPL > FPL > FLIT+ > MOON > Prox,Proto,TGP,Exact equal means share a dense rank; order within ties follows table order
+ToxCast,0.5,3,8,0.6747983206853241,0.6733341596891215,0.14641609962026125,Proto > FPL > SPL > Avg > TGP > MOON > FLIT+ > Prox,Proto,FPL,Exact equal means share a dense rank; order within ties follows table order
+ToxCast,1.0,1,8,0.6820974667539627,0.6734753967932162,0.8622069960746437,SPL > Proto > TGP > FPL > Avg > MOON > FLIT+ > Prox,SPL,Proto,Exact equal means share a dense rank; order within ties follows table order

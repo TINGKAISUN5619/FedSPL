@@ -1,0 +1,20 @@
+{
+  "case": {
+    "alpha": 1.0,
+    "case_id": "physchem_freesolv_a1p0_seed0",
+    "dataset": "freesolv",
+    "descriptor": "physchem",
+    "encoder": "mpnn",
+    "k": 16,
+    "lambda_proto": 0.1,
+    "local_steps": 200,
+    "method": "fedavg_proto",
+    "rounds": 50,
+    "seed": 0
+  },
+  "curve_sha256": "dbe7b4148057860e297d9d49819fe8f2c14c59dab4ce52dafc0922dd1e2dc87b",
+  "elapsed_seconds": 1000.3149765059352,
+  "exit_code": 0,
+  "formal": true,
+  "log_sha256": "2e74b1ae0e3309e86ce9b2f1182907804b83f44084c836defd61ec1815fcc131"
+}

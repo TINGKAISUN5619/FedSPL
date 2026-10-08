@@ -1,0 +1,55 @@
+dataset,alpha,method,n,mean_rmse,sd_rmse,status,endpoint,cohort
+esol,0.1,FedAvg,3,0.80003289381663,0.07263836930920696,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,0.1,FedProx,3,0.7690240740776062,0.07251310700393652,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,0.1,FLIT+,3,0.750681201616923,0.03770699936648423,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,0.1,MOON-MSE,3,1.1034560203552246,0.2453107376251435,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,0.1,FedSPL (fingerprint),3,0.7846725185712179,0.0841976272741941,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,0.1,FedSPL (physchem),3,0.7568138837814331,0.07443717319698585,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,0.5,FedAvg,3,0.7304834326108297,0.09458078460710598,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,0.5,FedProx,3,0.7063502073287964,0.07280944218883581,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,0.5,FLIT+,3,0.7119698921839396,0.06131447288857408,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,0.5,MOON-MSE,3,0.9991308649381002,0.13481196066500475,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,0.5,FedSPL (fingerprint),3,0.7434080839157104,0.10469438418259568,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,0.5,FedSPL (physchem),3,0.7168309688568115,0.10054151029382294,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,1.0,FedAvg,3,0.7137664953867594,0.028318487271501123,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,1.0,FedProx,3,0.7230599323908488,0.05826950828327793,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,1.0,FLIT+,3,0.7122370402018229,0.02957603643089949,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,1.0,MOON-MSE,3,0.9413852095603943,0.06704710612306457,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,1.0,FedSPL (fingerprint),3,0.7101161877314249,0.03404358801765042,complete,final_server_round49,reviewer_v3_regression_raw_targets
+esol,1.0,FedSPL (physchem),3,0.72331170241038,0.058179016789011946,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,0.1,FedAvg,3,1.321644385655721,0.22576450682396837,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,0.1,FedProx,3,1.39863916238149,0.49461573655211005,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,0.1,FLIT+,3,1.3296886285146077,0.3379087428040883,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,0.1,MOON-MSE,3,1.2331576347351074,0.1403491122215676,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,0.1,FedSPL (fingerprint),3,1.2248838742574055,0.2167803835225978,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,0.1,FedSPL (physchem),3,1.243397831916809,0.38813560219323523,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,0.5,FedAvg,3,1.329615314801534,0.22045547459948445,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,0.5,FedProx,3,1.371573269367218,0.4483494738577416,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,0.5,FLIT+,3,1.2509237329165142,0.35713044655901094,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,0.5,MOON-MSE,3,1.319184382756551,0.2693192747823709,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,0.5,FedSPL (fingerprint),3,1.3061329126358032,0.2738162084052226,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,0.5,FedSPL (physchem),3,1.4352820714314778,0.4549027256898772,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,1.0,FedAvg,3,1.3756273587544758,0.23587317315849807,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,1.0,FedProx,3,1.2822234233220418,0.20561751618026058,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,1.0,FLIT+,3,1.4075554609298706,0.29979503242372313,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,1.0,MOON-MSE,3,1.3367584546407063,0.2432473394558514,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,1.0,FedSPL (fingerprint),3,1.317582130432129,0.24790492083146473,complete,final_server_round49,reviewer_v3_regression_raw_targets
+freesolv,1.0,FedSPL (physchem),3,1.3016966978708904,0.1728839576762729,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,0.1,FedAvg,3,0.6888601183891296,0.022967380692031754,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,0.1,FedProx,3,0.6970726847648621,0.04133271764101254,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,0.1,FLIT+,3,0.6583686669667562,0.031470664369280546,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,0.1,MOON-MSE,3,0.7414767940839132,0.03748026296728742,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,0.1,FedSPL (fingerprint),3,0.6824249426523844,0.016854451701733785,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,0.1,FedSPL (physchem),3,0.6849758625030518,0.0061370525882345674,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,0.5,FedAvg,3,0.684531013170878,0.008996421413708086,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,0.5,FedProx,3,0.6926231781641642,0.03330487865855454,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,0.5,FLIT+,3,0.6699119011561075,0.010092821604098407,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,0.5,MOON-MSE,3,0.7828152378400167,0.08213886364866925,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,0.5,FedSPL (fingerprint),3,0.6939295927683512,0.011352015634993648,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,0.5,FedSPL (physchem),3,0.6794447104136149,0.01633850358136433,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,1.0,FedAvg,3,0.6770963668823242,0.012435130508664714,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,1.0,FedProx,3,0.6924779216448466,0.014314291601629175,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,1.0,FLIT+,3,0.6618884205818176,0.013595101269413337,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,1.0,MOON-MSE,3,0.740225354830424,0.03713477887760303,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,1.0,FedSPL (fingerprint),3,0.6944255034128824,0.015064844709539189,complete,final_server_round49,reviewer_v3_regression_raw_targets
+lipo,1.0,FedSPL (physchem),3,0.685364842414856,0.004972631494885925,complete,final_server_round49,reviewer_v3_regression_raw_targets

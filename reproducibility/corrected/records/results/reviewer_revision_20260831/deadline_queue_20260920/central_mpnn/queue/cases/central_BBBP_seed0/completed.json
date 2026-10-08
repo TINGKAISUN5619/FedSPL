@@ -1,0 +1,23 @@
+{
+  "blocks": 50,
+  "case_id": "central_BBBP_seed0",
+  "files": {
+    "block_curve.csv": "f6ba3de5ac36e08a256e71cb4686e80230878138609022b56c85f9b8e4500856",
+    "endpoints.json": "b41356bdb222205036d954c4fb4380ea17ef98c369805acc0a8798c15a3057d5",
+    "events.json": "136a9b7df484f9f04bb7c5bd9776e1c6204e6d28805141c82ac7f80c48563ce0",
+    "final.pt": "55526083bf52db88f3210fe65f12b3715523b26b0583c47f5b1acdfac6569c28",
+    "final_test_predictions.npz": "3825631184ed2064d2ceb00974feb400e3144d5c264e04d301468412090b053f",
+    "final_val_predictions.npz": "2062b653f9f79d961a04b6890f8c32732ec14816f6ea48f6c4691001132c37b5",
+    "selection.json": "d192a4a3ebc4c44a026ccf2354d71fa3cad0331b7f0dd227503592583ee99dd7",
+    "spec.json": "e0c729e6f036aaf778fc87bc3a76309a9ae97bc661179534aad8ddcff31bdf96",
+    "split_ids.json": "cf87e134021ea880e7dfa1e2820553982053cf30541592c64b312bb0007552ea",
+    "val_selected.pt": "24bc18e2fbab1f4006b758d8f7a04ac193ac6b5eb0f7448a248afd76c1100efd",
+    "val_selected_test_predictions.npz": "fd7caacdfbd6ee661fddfba85e6bdabf63c0011dae3cfaa173c02590a4a23d12",
+    "val_selected_val_predictions.npz": "36f7650176a2e57562ad2ce98443af1feeab0300115edb5752ef01c658a5b43f"
+  },
+  "formal": true,
+  "manifest_sha256": "0fd8d723a9490d2654ac5bd8cb14b058002b850df51d22a6a6a79eda0096c0e5",
+  "protocol": "central_mpnn_reviewer_v3_50x800_v1",
+  "status": "complete",
+  "successful_updates": 40000
+}

@@ -1,0 +1,20 @@
+{
+  "case": {
+    "alpha": 1.0,
+    "case_id": "physchem_lipo_a1p0_seed1",
+    "dataset": "lipo",
+    "descriptor": "physchem",
+    "encoder": "mpnn",
+    "k": 16,
+    "lambda_proto": 0.1,
+    "local_steps": 200,
+    "method": "fedavg_proto",
+    "rounds": 50,
+    "seed": 1
+  },
+  "curve_sha256": "e0acfdc675d844a615fdcb4953752534d486a2876af5eaeca04e9ddb3ea47650",
+  "elapsed_seconds": 996.0597843341529,
+  "exit_code": 0,
+  "formal": true,
+  "log_sha256": "0949926f43be38ed9a22447dabed5f60902b368241e2df551a13a55bbb4a5924"
+}

@@ -1,0 +1,23 @@
+{
+  "approval_sha256": "f710a1b45dfa7879b5d15071a2f88d334842f3fc2be46fa17ed682ff0dad97a0",
+  "case": {
+    "alpha": 1.0,
+    "case_id": "HIV_a1p0_seed2_official_avg",
+    "clients": 4,
+    "dataset": "HIV",
+    "rounds": 50,
+    "seed": 2,
+    "steps": 200
+  },
+  "exit_code": 0,
+  "formal": true,
+  "output_sha256": {
+    "final_model.pt": "7b973e90947001d5b8c0b0a90bb20e92c7811aef288f2dc83565d4133904b9c3",
+    "final_predictions.npz": "bc270f99f466fc6d157cc00b96d53f449480b749459f2337ee650d4f76f0dddb",
+    "final_rescore.json": "8d138b9c33874b3be158327ca606a2ac4ab89b63cba593b4af201ce3ba871aae",
+    "partition_audit.json": "adc8875af3bdea82ee8e7ae0eaeb49ca33db8aeae65ce5cd92c50ece14e79ee8",
+    "rounds.csv": "fe943eee1751d202f4bbda21e34dec9736e86e8a635c739539947e5b6acae1a9",
+    "run.log": "3f639b76f378f76fe7cc80c6657801293c090e9e944f922b193d875d94f67d01",
+    "run_spec.json": "07dc27f20571fa1a222d144afa5c393375eacf3f180bc980f1435bfd333d80fe"
+  }
+}

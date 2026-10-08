@@ -1,0 +1,10 @@
+dataset,alpha,treatment,control,n,mean_rmse_reduction,sd_paired_reduction,ci95_low,ci95_high,positive_seeds,interpretation
+esol,0.1,FedSPL (physchem),FedSPL (fingerprint),3,0.027858634789784748,0.01730496182309368,-0.015129273476978688,0.07084654305654818,3,"Exploratory unadjusted paired t interval, df=2"
+esol,0.5,FedSPL (physchem),FedSPL (fingerprint),3,0.026577115058898926,0.009688249851502856,0.002510168241016044,0.050644061876781804,3,"Exploratory unadjusted paired t interval, df=2"
+esol,1.0,FedSPL (physchem),FedSPL (fingerprint),3,-0.013195514678955078,0.055451149574705066,-0.1509438065025686,0.12455277714465846,1,"Exploratory unadjusted paired t interval, df=2"
+freesolv,0.1,FedSPL (physchem),FedSPL (fingerprint),3,-0.018513957659403484,0.18438639168510076,-0.4765551467951557,0.4395272314763487,2,"Exploratory unadjusted paired t interval, df=2"
+freesolv,0.5,FedSPL (physchem),FedSPL (fingerprint),3,-0.12914915879567465,0.25461254406429507,-0.7616417814142693,0.50334346382292,1,"Exploratory unadjusted paired t interval, df=2"
+freesolv,1.0,FedSPL (physchem),FedSPL (fingerprint),3,0.015885432561238606,0.12036311288783741,-0.28311311527834515,0.3148839804008223,1,"Exploratory unadjusted paired t interval, df=2"
+lipo,0.1,FedSPL (physchem),FedSPL (fingerprint),3,-0.002550919850667318,0.011590985070349684,-0.03134452298134088,0.026242683280006247,1,"Exploratory unadjusted paired t interval, df=2"
+lipo,0.5,FedSPL (physchem),FedSPL (fingerprint),3,0.014484882354736328,0.01074750214297526,-0.012213393026750063,0.04118315773622272,3,"Exploratory unadjusted paired t interval, df=2"
+lipo,1.0,FedSPL (physchem),FedSPL (fingerprint),3,0.00906066099802653,0.01871033539287472,-0.03741838875265846,0.055539710748711515,2,"Exploratory unadjusted paired t interval, df=2"

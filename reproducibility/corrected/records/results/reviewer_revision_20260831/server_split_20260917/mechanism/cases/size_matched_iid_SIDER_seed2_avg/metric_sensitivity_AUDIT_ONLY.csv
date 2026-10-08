@@ -1,0 +1,11 @@
+dataset,method,alpha,seed,round,local_steps,local_k,global_k,lambda_proto,model_scope,audit_policy,auc,eligible_for_performance_claim
+SIDER,avg,0.5,2,49,200,16,16,0.0,server,heldout_val_plus_test_NOT_primary,0.524890713215994,False
+SIDER,avg,0.5,2,49,200,16,16,0.0,server,missing_labels_as_zero_INVALID,0.5234053797440521,False
+SIDER,avg,0.5,2,49,200,16,16,0.0,client_0,heldout_val_plus_test_NOT_primary,0.6231632843049629,False
+SIDER,avg,0.5,2,49,200,16,16,0.0,client_0,missing_labels_as_zero_INVALID,0.614640465362234,False
+SIDER,avg,0.5,2,49,200,16,16,0.0,client_1,heldout_val_plus_test_NOT_primary,0.6029449829697355,False
+SIDER,avg,0.5,2,49,200,16,16,0.0,client_1,missing_labels_as_zero_INVALID,0.5899687058644347,False
+SIDER,avg,0.5,2,49,200,16,16,0.0,client_2,heldout_val_plus_test_NOT_primary,0.591834987921648,False
+SIDER,avg,0.5,2,49,200,16,16,0.0,client_2,missing_labels_as_zero_INVALID,0.5875560059961479,False
+SIDER,avg,0.5,2,49,200,16,16,0.0,client_3,heldout_val_plus_test_NOT_primary,0.5433985522722541,False
+SIDER,avg,0.5,2,49,200,16,16,0.0,client_3,missing_labels_as_zero_INVALID,0.5525353872753564,False
