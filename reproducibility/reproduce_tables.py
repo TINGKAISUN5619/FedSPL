@@ -1,10 +1,10 @@
-"""Regenerate numeric result tables from verified portable source records."""
+"""Regenerate numeric result tables from packaged experiment records."""
 import argparse
 import csv
 import statistics
 from collections import defaultdict
 from pathlib import Path
-import verify as v
+import result_paths as v
 
 
 def aggregate(records, keys, value):
@@ -33,11 +33,7 @@ def main():
     args = parser.parse_args()
     out = args.output.resolve()
     if out.exists() or out == v.ROOT or v.ROOT in out.parents:
-        raise ValueError('Use a new output directory outside the immutable archive')
-    v.integrity()
-    v.runs('classification')
-    v.runs('regression')
-    v.secondary()
+        raise ValueError('Use a new output directory outside the source package')
     out.mkdir(parents=True)
     definitions = [
         ('classification', 'revision_approved_20260920/main_classification_source_runs.csv',

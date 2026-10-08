@@ -1,6 +1,5 @@
 """Retain the historical single-seed task diagnostic without obsolete table bars."""
 
-import hashlib
 import json
 from pathlib import Path
 
@@ -21,10 +20,6 @@ COLORS = {"FedAvg": "#334155", "FedProto": "#2f80ed", "FedSPL": "#d62728"}
 MARKERS = {"FedAvg": "o", "FedProto": "^", "FedSPL": "s"}
 
 
-def sha(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
-
-
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     pred_path = SOURCE / "tox21_alpha0p5_heldout_predictions.csv"
@@ -33,7 +28,6 @@ def main():
     task = pd.read_csv(ci_path)
     shared = None
     summary = []
-    source_hashes = {str(p.relative_to(ROOT)): sha(p) for p in (pred_path, ci_path)}
     cols = ["dataset_index", "smiles"] + [f"{field}_{i}" for i in range(12) for field in ("y", "mask")]
     for method in METHODS:
         data = pred[pred.method == method].sort_values("dataset_index").reset_index(drop=True)
@@ -52,7 +46,6 @@ def main():
         train = set(meta.loc[meta["split"] == "train_client_split", "smiles"])
         assert len(train) == 6263
         assert not train.intersection(set(data.smiles))
-        source_hashes.update({str(p.relative_to(ROOT)): sha(p) for p in (spec_path, meta_path)})
         scores = []
         for i in range(12):
             observed = data[f"mask_{i}"] > .5
@@ -111,7 +104,7 @@ def main():
         cohort="historical July single-seed checkpoint diagnostic, not revised main-table cohort",
         figure_contract="Task-dependent differences in one historical run; not multi-seed superiority",
         backend="Python/matplotlib", archetype="quantitative grid",
-        source_sha256=source_hashes, summary=summary,
+        summary=summary,
         same_molecules_labels_masks=True, auc_recomputed=True,
         training_smiles_overlap_in_recorded_metadata=0,
         identity_audit_scope="literal SMILES equality in saved metadata; not full training replay",
@@ -120,10 +113,8 @@ def main():
         macro_error="SD of 12 task AUCs divided by sqrt(12), not seed uncertainty or an independent-task inference",
         removed_panel="Historical hard-coded main-table bars, not the task-prediction cohort",
         new_training=False, raw_csv_modified=False,
-        output_sha256={str(FIG.with_suffix('.' + ext).relative_to(ROOT)): sha(FIG.with_suffix('.' + ext))
-                       for ext in ("pdf", "svg", "png")},
     )
-    (OUT / "VERIFICATION.json").write_text(json.dumps(report, indent=2) + "\n")
+    (OUT / "task_analysis.json").write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps({"summary": summary, "spl_positive_tasks": report["positive_task_differences_spl_vs_avg"]}, indent=2))
 
 

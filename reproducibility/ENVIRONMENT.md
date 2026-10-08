@@ -1,8 +1,8 @@
 # Environments and Public Data
 
-## Offline Verification
+## Local Reproduction
 
-`verify.py`: Python 3.8+ standard library, no network, GPU or dataset download.
+`reproduce_tables.py`: Python 3.8+ standard library, no network, GPU or dataset download.
 
 CPU tests and plot reexports were run with Python 3.8.20 on macOS, PyTorch 2.4.1,
 DGL 1.1.2, DGLLife 0.3.2, RDKit 2024.3.5, NumPy 1.24.4, pandas 2.0.3,
@@ -17,8 +17,7 @@ Consult each run spec for its own environment; the CPU environment above is not
 declared equivalent. A complete original conda/container lock is not available.
 MMGNN upstream source is pinned in the SI to
 `78dcbff3a3d576506434241e4f26c70416453d9e`, from
-https://github.com/MathIntelligence/MMGNN ; included file hashes are authoritative
-for this payload. Upstream attribution/license files are retained when available;
+https://github.com/MathIntelligence/MMGNN . Upstream attribution/license files are retained when available;
 no new blanket software or dataset license is asserted.
 
 ## Data Acquisition and Preprocessing
@@ -27,8 +26,7 @@ Public CSV inputs are included for all eight datasets under `datasets/`.
 Classification inputs and 15 split JSONs come from the frozen central bundle;
 regression public CSVs come from local public-download copies. These inputs are
 not model weights. Scaffold-label tensors are small original partition inputs,
-not checkpoints. Verify their SHA256SUMS before using them. They are trusted
-archive inputs only; do not unpickle arbitrary untrusted `.pt` files.
+not checkpoints. Do not unpickle arbitrary untrusted `.pt` files.
 
 The frozen dataset loaders specify DGL's public dataset distribution endpoints
 using `_get_dgl_url`: `dataset/bbbp.zip`, `dataset/sider.zip`,
@@ -73,4 +71,4 @@ This is a user-controlled training entry example, not an executed/tested replay
 command or an exact historical hardware/worker configuration. Consult frozen
 configuration CSVs and run specs; do not change worker counts/RNG-consuming
 evaluation paths and claim exact trajectory identity. No queue or server access
-is required for the offline verification commands.
+is required for table reproduction or CPU tests.

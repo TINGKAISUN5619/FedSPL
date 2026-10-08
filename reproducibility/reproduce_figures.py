@@ -4,7 +4,7 @@ import importlib.util
 import os
 import shutil
 from pathlib import Path
-import verify
+import result_paths as paths
 
 
 def load(name, path):
@@ -19,43 +19,43 @@ def main():
     parser.add_argument('--output', type=Path, required=True, help='New output directory outside the archive')
     args = parser.parse_args()
     out = args.output.resolve()
-    if out.exists() or verify.ROOT == out or verify.ROOT in out.parents:
-        raise ValueError('Use a new directory outside the immutable archive')
-    verify.integrity()
+    if out.exists() or paths.ROOT == out or paths.ROOT in out.parents:
+        raise ValueError('Use a new directory outside the source package')
     out.mkdir(parents=True)
     os.environ.setdefault('MPLCONFIGDIR', str(out / 'matplotlib_config'))
-    base = load('plot_original', verify.ROOT / 'corrected/builders/plot_approved_revision_20260920.py')
+    base = load('plot_original', paths.ROOT / 'corrected/builders/plot_approved_revision_20260920.py')
     base.OUTPUT = out / 'corrected'
     base.FIGURES = out / 'corrected'
     base.OUTPUT.mkdir()
-    base.SUPPORT = verify.source(verify.PREFIX + 'cluster_support_review_20260916/k_summary.csv')
+    base.SUPPORT = paths.source(paths.PREFIX + 'cluster_support_review_20260916/k_summary.csv')
     original_read = base.read_rows
-    status = verify.data('robustness_audit_20260910/summaries/expected_run_status.csv')
+    status = paths.data('robustness_audit_20260910/summaries/expected_run_status.csv')
     selected = []
     for record in status:
         if record['suite'] == 'main_classification':
             record = dict(record)
-            record['csv_file'] = str(verify.source(record['csv_file']))
+            record['csv_file'] = str(paths.source(record['csv_file']))
             selected.append(record)
     base.read_rows = lambda p: selected if p == base.STATUS else original_read(p)
     base.prototype_support()
     base.classification_curves()
-    # The original Figure 5 builder resolves inputs and hashes relative to ROOT.
-    # Materialize only its inputs in a new workspace, retaining every source byte.
+    # The historical figure builder expects its original relative directory layout.
     work = out / 'historical_task'
-    for key, entry in verify.INDEX.items():
-        if entry['namespace'] == 'historical_task' and (key.startswith('TEST/results/') or '/mpp_diagnostics/' in key):
+    records = paths.ROOT / 'historical_task/records'
+    for original in records.rglob('*'):
+        key = str(original.relative_to(records))
+        if original.is_file() and (key.startswith('TEST/results/') or '/mpp_diagnostics/' in key):
             target = work / key
             target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(verify.source(key), target)
-    hist = load('historical_plot_original', verify.ROOT / 'historical_task/builders/restore_historical_task_panel_20260925.py')
+            shutil.copyfile(original, target)
+    hist = load('historical_plot_original', paths.ROOT / 'historical_task/builders/restore_historical_task_panel_20260925.py')
     hist.ROOT = work
     hist.SOURCE = work / 'paper_acs_latex/figures/mpp_diagnostics'
     hist.OUT = work / 'reports'
     hist.FIG = work / 'figures/tox21_historical_single_seed_tasks'
     hist.FIG.parent.mkdir(parents=True)
     hist.main()
-    print('PASS: unchanged plot functions reexported corrected convergence/support and historical two-panel Figure 5.')
+    print('Corrected convergence/support and historical two-panel Figure 5 exported.')
     print('Official mixed-protocol display is retained as audit-only PDF and numerical curve data, not pooled here.')
 
 

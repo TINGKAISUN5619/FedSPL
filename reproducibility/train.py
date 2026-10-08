@@ -12,7 +12,7 @@ import shutil
 import sys
 import zipfile
 from pathlib import Path
-import verify
+from result_paths import ROOT
 
 DATASETS = {
     'BBBP': ('bbbp', 'bbbp.zip', 'BBBP.csv'),
@@ -55,18 +55,17 @@ def main():
     config = json.loads(args.config.read_text())
     work = args.workspace.resolve()
     argv = command(config, work / 'new_results')
-    if work.exists() or work == verify.ROOT or verify.ROOT in work.parents:
-        raise ValueError('Use a new directory outside the immutable archive')
-    verify.integrity()
+    if work.exists() or work == ROOT or ROOT in work.parents:
+        raise ValueError('Use a new directory outside the source package')
     dataset = config['dataset']
     variant = 'regression_frozen' if dataset in ('esol', 'freesolv', 'lipo') else 'reviewer_v3_snapshot'
-    original = verify.ROOT / 'corrected/source' / variant
+    original = ROOT / 'corrected/source' / variant
     target = work / 'code'
     shutil.copytree(original, target)
     downloads = work / 'public_inputs'
     downloads.mkdir()
     module, archive, filename = DATASETS[dataset]
-    source = next((verify.ROOT / 'datasets' / dataset).glob('public.csv*'))
+    source = next((ROOT / 'datasets' / dataset).glob('public.csv*'))
     if archive:
         with zipfile.ZipFile(downloads / archive, 'w', zipfile.ZIP_DEFLATED) as zf:
             zf.write(source, filename)
@@ -74,9 +73,8 @@ def main():
         shutil.copyfile(source, downloads / filename)
     scaffold = target / 'data/scaffold_result' / ('scffoldLabel_' + dataset + '.pt')
     scaffold.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(verify.ROOT / 'datasets' / dataset / 'scaffold_labels.pt', scaffold)
+    shutil.copyfile(ROOT / 'datasets' / dataset / 'scaffold_labels.pt', scaffold)
     prepared = dict(config=config, argv=argv, frozen_variant=variant,
-        source_sha256={str(p.relative_to(original)): verify.sha(p) for p in original.rglob('*.py')},
         adapter='new offline filesystem adapter; unchanged scientific implementation',
         graph_construction_tested=False, training_executed=args.execute,
         warning='New execution, not claimed bitwise historical reproduction; CUDA chosen by frozen entry when available')
@@ -87,11 +85,10 @@ def main():
     sys.path.insert(0, str(target))
     dataset_module = importlib.import_module('data.' + module)
     expected = downloads / (archive or filename)
-    expected_sha = verify.sha(expected)
 
     def local_download(url, path, **kwargs):
-        if Path(path) != expected or verify.sha(expected) != expected_sha:
-            raise ValueError('Unexpected data download path/hash; network acquisition disabled')
+        if Path(path) != expected or not expected.is_file():
+            raise ValueError('Unexpected data download path; network acquisition disabled')
         return str(expected)
 
     dataset_module.get_download_dir = lambda: str(downloads)

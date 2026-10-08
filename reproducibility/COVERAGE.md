@@ -1,22 +1,22 @@
 # Main and Unified SI Coverage
 
-Paths below are original relative identifiers, resolved by PROVENANCE.json to
-included payloads. All referenced result CSVs are physically included, not merely
+Paths below are original relative identifiers located by the portable entry
+points. All referenced result CSVs are physically included, not merely
 listed. Main and SI TeX source files are deliberately excluded.
 
-| Object | Included numeric/source evidence | Verification boundary |
+| Object | Included numeric/source evidence | Reproduction scope |
 |---|---|---|
 | Main Table 1 dataset statistics | public CSVs; source_dataset_landscape_stats.csv; dataset loaders; partition/identity audits | Rounded landscape statistics preserved; graph filtering is not rerun |
-| Main classification table and paired analyses | main_classification_source_runs/summary/paired CSVs; 360 original curves; corrected snapshot; manifests | All 50 rounds, source hashes, means and sample SD recomputed |
+| Main classification table and paired analyses | main_classification_source_runs/summary/paired CSVs; 360 original curves; corrected snapshot; manifests | Means and sample SDs aggregated from stored endpoints |
 | Central reference | 15 specs/completion records/split IDs/block curves/endpoints; central_source_runs/summary; central_mpnn.py | Final block 49 and 800 updates/block checked; no checkpoint inference |
-| Main regression table | regression_table_source_runs/summary/contrasts; 162 original curves; frozen regression code and specs | All 50 rounds, source hashes, 54 means/SDs recomputed |
+| Main regression table | regression_table_source_runs/summary/contrasts; 162 original curves; frozen regression code and specs | 54 means/SDs aggregated from stored endpoints |
 | Main convergence figure | all corrected source curves and plot CSVs; original plotting script; current official-reference display PDF and separate official curve CSVs | Corrected convergence reexport supported; historical substitution is audit-only |
 | Main Figure 5 | current two-panel PDF; restore_historical_task_panel_20260925.py; held-out predictions; 36 task AUC/CI rows; run summaries and training metadata | Reexport recomputes 36 task AUCs and three macro summaries; stored bootstrap bounds retained, not resampled |
 | Prototype count/support figure | k_summary, run/round/support audits; occupancy and original result CSVs; plotting/audit code | Source records included; plot reexport, not new clustering |
 | Main schematics and TOC | exact currently referenced raster assets | Illustrative assets, no empirical CSV implied |
-| SI independent-client LR/NB/RF | 135 source conditions, 45 summary cells, raw per-client-task CSVs, full-coverage fallback records, implementations | Source hashes and means/SDs; no estimator refitting |
+| SI independent-client LR/NB/RF | 135 source conditions, 45 summary cells, raw per-client-task CSVs, full-coverage fallback records, implementations | Means/SDs; no estimator refitting |
 | SI mechanism endpoints/sizes/contrasts | 30 raw endpoint curves, task curves, split/batch trace metadata, 120 endpoints, 96 differences and 32 summaries, control implementations | Final endpoints recomputed; archived pairing certificates not new trajectory replay |
-| SI encoder/descriptor robustness | sources.csv, summary/contrast CSVs; raw selected curves; MPNN/AttentiveFP implementations | Final endpoints/source hashes; no retraining |
+| SI encoder/descriptor robustness | sources.csv, summary/contrast CSVs; raw selected curves; MPNN/AttentiveFP implementations | Final endpoints; no retraining |
 | SI adaptation disclosure | unchanged corrected trainer/client/server source; README adaptation differences | Code-level definition, not upstream benchmark reproduction |
 | SI official historical references | all original 18 cases and 9 Tox21 replay cases; specs, final rescores, per-round/per-task replay data; separate official source | Audit-only; missing weights/probabilities preclude new inference for all runs |
 | SI independent MPNN | 15 seed-0 case curves/specs/completion/selection/split records, worker, summary | Final client means; no three-seed uncertainty claim |
@@ -26,11 +26,10 @@ listed. Main and SI TeX source files are deliberately excluded.
 ## Honest Gaps
 
 Not a full checkpoint/inference archive. Graph caches and checkpoints were
-deliberately excluded; original run histories may certify their hashes but those
-bytes cannot be rechecked here. Some historical scripts import excluded queue
+deliberately excluded. Some historical scripts import excluded queue
 utilities, assume an old layout, or emit TeX; they are reference implementations,
 not the recommended portable commands. Not all old code versions have an
-immutable run-to-source attestation. Historical source namespaces must not be
+exact run-to-source correspondence. Historical source namespaces must not be
 presented as corrected execution paths.
 
 No 50-round training, fresh CUDA execution, long-run RNG equivalence, public URL

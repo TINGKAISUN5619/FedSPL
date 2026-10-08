@@ -1,8 +1,7 @@
-# JCIM FedSPL Reviewer Reproducibility Archive
+# FedSPL Reproducibility Guide
 
-Archive: `JCIM_FedSPL_reproducibility_20260926.zip` (26 September 2026).
-This is a standalone source/result audit and figure-reproduction package, not a
-claim of bitwise training replay. No training was performed while packaging.
+This package provides experiment code, result tables and figure-reproduction
+scripts. Exact numerical replay across different hardware is not guaranteed.
 No manuscript TeX, checkpoints, graph caches, credentials, server login commands,
 or executable queue orchestrators are distributed.
 
@@ -11,19 +10,16 @@ or executable queue orchestrators are distributed.
 Run from the extracted archive, with bytecode generation disabled:
 
 ```sh
-python3 -B verify.py
 python3 -B reproduce_tables.py --output ../numeric_tables_20260926
 python -B test_cpu.py
 python -B reproduce_figures.py --output ../reexport_20260926
 ```
 
-`verify.py` needs only Python 3.8+ standard library. It checks every SHA256SUMS
-entry, exact inventory coverage, original numerical curve hashes, final-round
-endpoints, means/sample SDs, classification split/allocation membership, and
-negative tests rejecting truncated/reordered/duplicate curves and best-test
-selection. It neither imports scientific training modules nor starts jobs.
+`reproduce_tables.py` needs only Python 3.8+ standard library. It aggregates the
+stored experiment endpoints into means and sample standard deviations without
+importing training modules or starting jobs.
 The optional CPU and figure commands need the environment in ENVIRONMENT.md.
-Their output directory must be new and outside this immutable archive.
+Their output directory must be new and outside this source package.
 
 For an explicit single-run execution path, `train.py` prepares a disposable copy
 of the frozen source and public inputs, and substitutes only local filesystem
@@ -39,7 +35,7 @@ Only the last command starts training, and it was NOT run by the packager.
 Use `regression_example.json` for the frozen raw-target regression implementation.
 The import-smoke checks load the actual frozen entry and parse its help; they do
 not test graph construction, training or checkpoint regeneration. Generated
-`PREPARED.json` records exact arguments and copied source hashes. Fresh graph
+`PREPARED.json` records the selected configuration and command arguments. Fresh graph
 construction requires compatible RDKit/DGL, valid-count/split validation, and
 the resources described in ENVIRONMENT.md. No full-matrix runner is promised.
 
@@ -58,15 +54,9 @@ the resources described in ENVIRONMENT.md. No full-matrix runner is promised.
   task/bootstrap CSV, run summaries and training metadata. No old three-panel
   hard-coded table graphic is included. Task SEM is not seed uncertainty.
 
-`PROVENANCE.json` maps every repository-relative input to its actual archive
-path, original hash, payload hash and transformation. Scientific `.py` files
-are byte-identical copies. Metadata containing deployment paths is explicitly
-marked `deployment_paths_only`; these copies are not original-byte certificates.
-Numerical curve CSVs used for primary endpoint verification retain their original
-bytes and hashes. Portable adapters are new packaging code, not historical code.
-`PACKAGING_AUDIT.json` records inspected manuscript/SI hashes and referenced labels,
-but includes no manuscript text. Source paths retained in manifests are provenance
-identifiers, not commands or prerequisites for access to another filesystem.
+The portable entry points locate records within these three directories. Source
+paths in historical metadata identify the original experiment layout; they do
+not require access to the authors' filesystem.
 
 ## Corrected Main Protocol
 
@@ -116,10 +106,8 @@ as separate fields and disables local-test loader aliases. Five-field molecular
 samples have stable IDs; the generic 3/4-field fallback can use batch-local IDs
 and must not be advertised as a globally stable-ID path.
 
-Some archived audit inventories explicitly call the September snapshot a later
-semantics reference, not the exact original version of every early run. The
-archive does not invent per-run code attestations. Available run specs, hashes,
-and curve certificates identify narrower exact-source relationships.
+The September snapshot documents the corrected implementation; it is not the
+exact source version used for every earlier historical experiment.
 Keep frozen code unchanged even where later protocol work identified RNG-path
 differences: an added DataLoader/prototype traversal can change subsequent RNG
 consumption. A short CPU check is not 50-round CUDA trajectory equivalence.
@@ -127,9 +115,9 @@ No optimizer-step parity or full CUDA replay was newly run for this archive.
 
 Original builders are retained for algorithm and selection transparency, but
 some expect the old repository layout or excluded orchestration dependencies.
-Do not run their write-mode mains against source records. `verify.py` is the
-portable read-only result adapter; `reproduce_figures.py` redirects only I/O of
-unchanged plot functions and never rewrites their scientific code. The package
+Do not run their write-mode mains against source records. Use
+`reproduce_tables.py` and `reproduce_figures.py` to write new outputs separately.
+The package
 does not claim every legacy worker is a turnkey executable on modern platforms.
 
 ## Known Scientific Limits
@@ -163,7 +151,5 @@ no three-seed SD. MMGNN: two datasets, fixed split/allocation seed 0, initializa
 0/1/2; raw-logit AUC, validation-selected learning rate, 12 federated plus 6
 individual runs. None of these is a universal performance superiority claim.
 
-No retained weights means checkpoint inference and original prediction integrity
-cannot be newly reverified for every run. Source hashes attest bytes, not the truth
-of a scientific claim. Saved metadata attestations are explicitly weaker than
-new training or inference. See COVERAGE.md and RELEASE_TESTS.json for actual scope.
+Trained weights are not retained, so new checkpoint inference is not available
+for every run. See COVERAGE.md for the supported reproduction tasks.

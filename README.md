@@ -14,16 +14,15 @@ This repository expands the manuscript's reproducibility archive into browsable
 source, configurations, data inputs, and result files. It contains no manuscript,
 reviewer correspondence, trained checkpoints, or server credentials.
 
-## Quick start: verify the reported numbers
+## Quick start: reproduce result tables
 
 ```sh
 git clone https://github.com/TINGKAISUN5619/FedSPL.git
 cd FedSPL/reproducibility
-python3 -B verify.py
 python3 -B reproduce_tables.py --output ../../fedspl_numeric_tables
 ```
 
-These two commands use Python 3.8+ standard library only. They do not install
+Table reproduction uses Python 3.8+ standard library only. It does not install
 dependencies, access a server, or start training. Choose a new output directory.
 
 For the optional CPU tests and figure reproduction, first prepare the scientific
@@ -60,7 +59,6 @@ runs. Training can be computationally expensive.
 | [Historical task analysis](reproducibility/historical_task) | Single-seed Tox21 per-task predictions and figure inputs |
 | [Datasets](reproducibility/datasets) | Public benchmark inputs, scaffold labels and saved splits |
 | [Coverage](reproducibility/COVERAGE.md) | Supported reproduction tasks and their limits |
-| [Publication provenance](PUBLICATION_PROVENANCE.json) | Archive identity and path-only log redactions |
 
 The corrected classification cohort contains 360 runs / 120 three-seed cells;
 the regression cohort contains 162 runs / 54 three-seed cells. Other diagnostics
@@ -70,20 +68,8 @@ have separately documented protocols and seed counts.
 from the corrected protocol in supervision and splitting. Historical per-task
 figures are single-seed analyses, not estimates of multi-seed variability.
 The detailed guide describes these distinctions and known molecular-identity
-overlaps in BBBP. Verification checks archived bytes and numerical summaries;
-it does not establish bitwise reproduction of CUDA training or supply missing
-model checkpoints.
-
-## Integrity and versioning
-
-The original submitted archive remains unchanged. Scientific Python files and
-numerical CSVs are byte-identical to that archive. Fifteen logs have only their
-private deployment-path prefix replaced; public checksums and provenance have
-been updated accordingly. Keep generated outputs outside `reproducibility/`
-because its verifier checks an exact file inventory.
-
-Use a commit-pinned repository URL when citing the exact version used. Do not
-cite a publication DOI unless one has actually been assigned.
+overlaps in BBBP. Trained model checkpoints are not included. Keep generated
+outputs outside `reproducibility/` so that the supplied results remain unchanged.
 
 ## Attribution and licensing
 
